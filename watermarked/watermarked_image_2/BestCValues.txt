@@ -1,0 +1,24 @@
+This file contains optimized c values for the original image.
+
+Time and Date produced : 2025-04-07 20:27:41.168419
+
+For Block 1 the optimized C value is 1
+For Block 2 the optimized C value is 1
+For Block 3 the optimized C value is 1
+For Block 4 the optimized C value is 47
+For Block 5 the optimized C value is 1
+For Block 6 the optimized C value is 1
+For Block 7 the optimized C value is 1
+For Block 8 the optimized C value is 23
+For Block 9 the optimized C value is 62
+For Block 10 the optimized C value is 65
+For Block 11 the optimized C value is 1
+For Block 12 the optimized C value is 1
+For Block 13 the optimized C value is 1
+For Block 14 the optimized C value is 1
+For Block 15 the optimized C value is 1
+For Block 16 the optimized C value is 1
+
+Code we took after final extraction = 2410535894432701
+
+Extraction Rate = 100.0%
