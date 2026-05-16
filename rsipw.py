@@ -110,7 +110,7 @@ def findOptimalCValueForBlock(blockParams, embedObject, code, g_cell,
 # Output: None
 def run(imagePath, code, mode, step):
 	extension = os.path.splitext(imagePath)[1]
-	imageName = (((imagePath.split("/"))[-1]).split(extension))[0]
+	imageName = os.path.splitext(os.path.basename(imagePath))[0]
 	startingPoint = time.time()
 	code = getListFromCode(code)
 
