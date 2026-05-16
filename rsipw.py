@@ -1,4 +1,4 @@
-import cv2,sys,time,numpy as np
+import cv2,sys,time,numpy as np,traceback
 from skimage.metrics import structural_similarity as ssim
 from decodesip import decodeSip
 from encodeinteger import encodeInteger
@@ -68,6 +68,7 @@ def embed(code, mode, imagePath, imageName, extension):
 		return embedResult
 	except Exception as e:
 		print(f"An error occurred: {e}")
+		traceback.print_exc()
 		exit(1)
 
 # Author: Vasileios Vouronikos

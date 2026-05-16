@@ -1,10 +1,7 @@
-Version1/watermarked/*
-Version2/watermarked/*
-Version1/__pycache__/
-Version2/__pycache__/
-Version1/dumb/*
-Version2/dumb/*
-Version2/.venv/
+watermarked/*
+__pycache__/
+dumb/*
+.venv/
 *.pyc
 *.pyo
 *.pyd

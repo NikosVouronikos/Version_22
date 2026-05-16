@@ -162,7 +162,7 @@ def prepareEmbedding(imagePath, code, mappingMode):
     M,N = img.size
     imageArray = np.array(img)
     
-    code = checkForFullCode(code)							# Check if code is complete or not
+    code = checkForFullCode(code, 9)						# Check if code is complete or not
     size = sqrt(len(code))								
     mapping = getCodeMapping(mappingMode)					# Get mapping between code digits and watermarks
     codeSips = getSipsFromCode(mapping, code)				# Build watermarks (SiPs) sequence from code sequence using the mapping

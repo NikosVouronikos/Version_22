@@ -1,7 +1,5 @@
 import random,math
 
-LENGTH = 16
-
 # Author: Nikolaos Vouronikos
 # Description: Returns block's dimensions according to Image's dimensions
 def getBlockDimensions(M, N, size) :
@@ -37,11 +35,11 @@ def getCodeFromList(codeList):
 	return code
 
 # Author: Nikolaos Vouronikos
-# Description: Generates a fixed or random mapping between digits [0,f] and watermarks of class 11 [16,31]
+# Description: Generates a fixed or random mapping between digits [0,f] and watermarks of class 9 [8,15]
 def getCodeMapping(mode):
 	mapping = {}
-	listOfSips = list(range(16,32))						# Class 11 watermarks
-	listOfNums = list(range(10)) + list('abcdef')
+	listOfSips = list(range(8,16))						# Class 9 watermarks
+	listOfNums = list(range(8))
 	if(mode == 'FIXED'):
 		for i in range(len(listOfSips)):
 			mapping[listOfSips[i]] = listOfNums[i]
@@ -67,13 +65,13 @@ def getSipsFromCode(mapping, code):
 	return codeSips
 
 # Author: Nikolaos Vouronikos
-# Description: Checks if the code's size is equal to LENGTH
-# If not then for < LENGTH add random digits and for > LENGTH keep only the first LENGTH digits
-def checkForFullCode(code):
-	diff = LENGTH - len(code)
-	if(len(code) < LENGTH):
+# Description: Checks if the code's size is equal to length
+# If not then for < length add random digits and for > length keep only the first length digits
+def checkForFullCode(code, originalLength):
+	diff = originalLength - len(code)
+	if(len(code) < originalLength):
 		for i in range(diff):
 			code.append(random.randint(0,9))
 	else:
-		code = code[0:LENGTH]
+		code = code[0:originalLength]
 	return code
