@@ -101,71 +101,71 @@ def getWatermarkedBlock(comCells, index, em, sip, optimalCValue, gridSize, RBWid
 	return g_cell, watermarkedBlock
 
 # Author: Nikolaos Vouronikos
-def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary, code, codeSips, extension):
-	script_directory = os.path.dirname(os.path.abspath(__file__))
-	watermarked_path = os.path.join(script_directory, "watermarked")
-	subpath = os.path.join(watermarked_path, watermarkedImageName)
+def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    watermarked_path = os.path.join(script_directory, "watermarked")
+    subpath = os.path.join(watermarked_path, watermarkedImageName)
 
-	if not os.path.exists(watermarked_path):
-		os.makedirs(watermarked_path)
-	if not os.path.exists(subpath):
-		os.makedirs(subpath)
-	
-	output_path = os.path.join(subpath, (watermarkedImageName + extension))
-	if os.path.exists(output_path):
-		os.remove(output_path)
+    os.makedirs(subpath, exist_ok=True)
 
-	# Use ffmpeg for lossless saving (raw image without artifacts)
-	imageArray = np.array(watermarkedImage)
-	height, width = imageArray.shape[:2]
-	
-	# Determine pixel format
-	if len(imageArray.shape) == 3 and imageArray.shape[2] == 3:
-		pixel_format = 'rgb24'
-	else:
-		pixel_format = 'gray'
-	
-	try:
-		# ffmpeg command for lossless encoding
-		cmd = [
-			'ffmpeg',
-			'-f', 'rawvideo',
-			'-pixel_format', pixel_format,
-			'-video_size', f'{width}x{height}',
-			'-i', 'pipe:0',
-			'-c:v', 'png',  # PNG codec is lossless
-			'-y',  # Overwrite output
-			output_path
-		]
-		
-		process = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-		stdout, stderr = process.communicate(input=imageArray.tobytes())
-		
-		if process.returncode != 0:
-			print(f"FFmpeg error: {stderr.decode()}")
-			# Fallback to PIL if ffmpeg fails
-			print("Falling back to PIL...")
-			watermarkedImage.save(output_path, quality=100)
-	except FileNotFoundError:
-		print("FFmpeg not found. Falling back to PIL...")
-		watermarkedImage.save(output_path, quality=100)
-	except Exception as e:
-		print(f"Error with ffmpeg: {e}. Falling back to PIL...")
-		watermarkedImage.save(output_path, quality=100)
-	
-	mapping_path = os.path.join(subpath, "Code_Mapping.txt")
+    # Force PNG because it is lossless
+    output_path = os.path.join(subpath, watermarkedImageName + ".png")
 
-	try :
-		mapping = open(mapping_path,"w+")
-	except :
-		print("File cannot be opened")
-		exit(1)
+    if os.path.exists(output_path):
+        os.remove(output_path)
 
-	for key in dictionary:
-		mapping.write(str(key) + "," + str(dictionary[key]) + "\n")
+    imageArray = np.asarray(watermarkedImage)
 
-	mapping.close()
-	return subpath
+    if imageArray.dtype != np.uint8:
+        imageArray = np.clip(imageArray, 0, 255).astype(np.uint8)
+
+    height, width = imageArray.shape[:2]
+
+    if len(imageArray.shape) == 3 and imageArray.shape[2] == 3:
+        pixel_format = "rgb24"
+    elif len(imageArray.shape) == 3 and imageArray.shape[2] == 4:
+        pixel_format = "rgba"
+    else:
+        pixel_format = "gray"
+
+    try:
+        cmd = [
+            "ffmpeg",
+            "-y",
+            "-f", "rawvideo",
+            "-pixel_format", pixel_format,
+            "-video_size", f"{width}x{height}",
+            "-i", "pipe:0",
+            "-frames:v", "1",
+            "-compression_level", "0",
+            output_path
+        ]
+
+        process = subprocess.run(
+            cmd,
+            input=imageArray.tobytes(),
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=True
+        )
+
+    except FileNotFoundError:
+        print("FFmpeg not found. Falling back to PIL...")
+        watermarkedImage.save(output_path, format="PNG")
+
+    except subprocess.CalledProcessError as e:
+        print("FFmpeg error:")
+        print(e.stderr.decode(errors="ignore"))
+        print("Falling back to PIL...")
+        watermarkedImage.save(output_path, format="PNG")
+
+    mapping_path = os.path.join(subpath, "Code_Mapping.txt")
+
+    with open(mapping_path, "w+") as mapping:
+        for key in dictionary:
+            mapping.write(str(key) + "," + str(dictionary[key]) + "\n")
+
+    return subpath
 
 # Author: Nikolaos Vouronikos
 def calculateElapseTimeAndPrintResults(start, extractionRate):
@@ -234,3 +234,21 @@ def getGridSize(em, imageArray, Rxy, Bxy, RBWidth):
 			break
 
 	return [mingrix, mingridy]
+
+# Author: Nikolaos Vouronikos
+# Description: Reconstruct final image by placing watermarked blocks
+# back into their original positions WITHOUT resizing/interpolation
+def reconstructWatermarkedImage(imageArray, watermarkedBlocks, blockWidth, blockHeight, M, N):
+    finalArray = imageArray.copy()
+    index = 0
+    for offsetY in range(0, (N - blockHeight + 1), blockHeight):
+        for offsetX in range(0, (M - blockWidth + 1), blockWidth):
+
+            finalArray[
+                offsetY:(offsetY + blockHeight),
+                offsetX:(offsetX + blockWidth)
+            ] = np.array(watermarkedBlocks[index])
+
+            index += 1
+
+    return Image.fromarray(finalArray)

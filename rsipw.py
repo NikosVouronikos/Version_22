@@ -58,9 +58,8 @@ def embed(code, mode, imagePath, imageName, extension, step):
 				index = index + 1
 
 		watermarkedImageName = "watermarked_" + imageName
-		watermarkedImage = mergeCellsToImage(watermarkedBlocks, blockWidth, blockHeight, int(size))								# Merge all watermarked blocks and reconstruct image
-		watermarkedImage = Image.fromarray((cv2.resize(np.array(watermarkedImage), (M,N), interpolation = cv2.INTER_LANCZOS4)))	# From the Array go to the Image
-		subpath = saveWatermarkedImage(watermarkedImageName, watermarkedImage, mapping, code, codeSips, extension)
+		watermarkedImage = reconstructWatermarkedImage(imageArray,watermarkedBlocks,blockWidth,blockHeight,M,N)
+		subpath = saveWatermarkedImage(watermarkedImageName, watermarkedImage, mapping)
 		writeBasicValuesInFile(gridSize, RBWidth, Rxy, Bxy, subpath)
 		writeGridPositionsInFile(optimalGridPositionForEachBlock, subpath)
 		getPSNRAndSSIM(np.array(watermarkedImage), imageArray)

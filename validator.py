@@ -30,20 +30,27 @@ def getWatermarkedBlocksInList(code, imagePath):
 def getMapping(code, imagePath):
 	mappingPath = os.path.join(os.path.dirname(imagePath), "Code_Mapping.txt")
 	mapping = {}
-
 	try:
-		f = open(mappingPath, "r")
-	except :
+		with open(mappingPath, "r") as f:
+			for fileLine in f:
+				if not fileLine.strip():
+					continue
+				lineSplit = fileLine.split(",")
+				if len(lineSplit) < 2:
+					continue
+				key_str = lineSplit[0].strip()
+				val_str = lineSplit[1].strip()
+				try:
+					key = int(key_str)
+				except ValueError:
+					continue
+				if isNumericString(val_str):
+					mapping[key] = int(val_str)
+				else:
+					mapping[key] = val_str
+	except Exception:
 		print("File cannot be opened")
 		exit(1)
-
-	for i in range(len(code)):
-		fileLine = f.readline()
-		lineSplit = fileLine.split(",")
-		if(isNumericString(lineSplit[1])):
-			mapping[int(lineSplit[0])] = int(lineSplit[1])
-		else:
-			mapping[int(lineSplit[0])] = lineSplit[1].strip()
 	return mapping
 
 # Author: Nikolaos Vouronikos
@@ -97,7 +104,8 @@ def getGridPositions(code, imagePath):
 
 # Author: Nikolaos Vouronikos
 def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, Rxy, Bxy, allGridPositions):
-	codeTaken,totalWatermarksExtracted = [],16
+	totalWatermarks = len(watermarkedBlocks)
+	codeTaken,totalWatermarksExtracted = [],totalWatermarks
 	for i in range(len(watermarkedBlocks)):
 		watermarkedBlock,sip,bestMove,enable = watermarkedBlocks[i],codeSips[i],allGridPositions[i],1
 		isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, sip, innerSips[i], gridSize, RBWidth, Rxy, Bxy, bestMove)
@@ -109,7 +117,7 @@ def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, 
 		else:
 			codeTaken.append(mapping[decodedKey])
 		printResults(3, i, enable, 0, [])
-	extractionRate = (totalWatermarksExtracted / 16)*100
+	extractionRate = (totalWatermarksExtracted / totalWatermarks)*100 if totalWatermarks > 0 else 0
 	extractionResult = ExtractionResult(codeTaken, extractionRate)
 	return extractionResult
 
@@ -139,6 +147,6 @@ def runValidation(imagePath, code):
 
 if __name__ == '__main__':
 	# Initialization from command line
-	# Example: py validator.py watermarked/watermarked_people/watermarked_people.jpg 56728192afd67fca
+	# Example: py validator.py watermarked/watermarked_people/watermarked_people.jpg 112230765
 	imagePath, code = sys.argv[1:3]
 	runValidation(imagePath, code)
