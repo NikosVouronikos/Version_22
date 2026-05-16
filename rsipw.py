@@ -33,7 +33,7 @@ def extract(embedResult):
 # Author: Nikolaos Vouronikos
 # Description: Embed user's code-sequence and produce watermarked image
 # Output: Embed Object
-def embed(code, mode, imagePath, imageName, extension):
+def embed(code, mode, imagePath, imageName, extension, step):
 	try:
 		# Initialize variables
 		watermarkedBlocks, innerSips, index, extractionIsPrioritized = [], [], 0, 1
@@ -53,7 +53,7 @@ def embed(code, mode, imagePath, imageName, extension):
 				if(index == 0):
 					gridSize, RBWidth, Rxy, Bxy = calculateBasicValues(blockProperties, 2, 2, blockImage, em)
 
-				optimalCValue, watermarkedBlock, optimalGridPosition = findOptimalCValueForBlock(blockProperties, em, code, blockImage, mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName)	# Begin C Optimization for Block
+				optimalCValue, watermarkedBlock, optimalGridPosition = findOptimalCValueForBlock(blockProperties, em, code, blockImage, mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName, step)	# Begin C Optimization for Block
 				optimalGridPositionForEachBlock.append(optimalGridPosition), optimalCValues.append(optimalCValue), watermarkedBlocks.append(watermarkedBlock)
 				index = index + 1
 
@@ -88,7 +88,7 @@ def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, 
 # Description: Run C Optimization Algorithm for block (Fast or Full)
 # Output: Optimal C Value (Integer), Watermarked Block (PIL.Image.Image), Grid Position ([x,y])
 def findOptimalCValueForBlock(blockParams, embedObject, code, g_cell, 
-								mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName):
+								mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName, step):
 	if(mode == 'FAST'):
 		isExtracted,badPositions,counter = False,[],0
 		while(isNotExtracted(isExtracted, counter)): # Find random position but if no extraction there try again with different position (max 5 times)
@@ -102,20 +102,20 @@ def findOptimalCValueForBlock(blockParams, embedObject, code, g_cell,
 				badPositions.append(randomGridPosition)
 		return optimalCValue,watermarkedBlock,randomGridPosition
 	else:
-		optimalCValue,watermarkedBlock,optimalGridPosition = optimizeCValueFull(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath)
+		optimalCValue,watermarkedBlock,optimalGridPosition = optimizeCValueFull(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, step)
 		return optimalCValue,watermarkedBlock,optimalGridPosition
 
 # Author: Nikolaos Vouronikos
 # Description: Run function starts embed procedure
 # Output: None
-def run(imagePath, code, mode):
+def run(imagePath, code, mode, step):
 	extension = os.path.splitext(imagePath)[1]
 	imageName = (((imagePath.split("/"))[-1]).split(extension))[0]
 	startingPoint = time.time()
 	code = getListFromCode(code)
 
 	# Run Main Algorithm
-	embedResult = embed(code, mode, imagePath, imageName, extension) 	# Embed
+	embedResult = embed(code, mode, imagePath, imageName, extension, int(step)) 	# Embed
 	extractionResult = extract(embedResult) 							# Extract (optional)
 	codeExtracted = getCodeFromList(extractionResult.codeTaken)
 	writeBestCValuesInFile(embedResult.optimalCValues, codeExtracted, extractionResult.extractionRate, embedResult.subpath)
@@ -123,6 +123,6 @@ def run(imagePath, code, mode):
 
 if __name__ == '__main__':
 	# Initialization from command line
-	# Example: py rsipw.py testImages/image1.jpg 56728192afd67fca FAST through cmd 
-	imagePath, code, mode = sys.argv[1:4]
-	run(imagePath, code, mode)
+	# Example: py rsipw.py testImages/image1.jpg 56728192afd67fca FAST 10 through cmd 
+	imagePath, code, mode, step = sys.argv[1:5]
+	run(imagePath, code, mode, step)

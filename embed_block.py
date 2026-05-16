@@ -63,7 +63,7 @@ def findOptimalCValueForBlock(blockParams, embedObject, code, g_cell,
 				badPositions.append(randomGridPosition)
 		return optimalCValue,watermarkedBlock,randomGridPosition
 	else:
-		optimalCValue,watermarkedBlock,optimalGridPosition = optimizeCValueFull(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imageName, imagePath)
+		optimalCValue,watermarkedBlock,optimalGridPosition = optimizeCValueFull(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imageName, imagePath, step)
 		return optimalCValue,watermarkedBlock,optimalGridPosition
 
 ##############################TEST RUN##############################

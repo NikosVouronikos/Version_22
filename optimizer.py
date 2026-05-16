@@ -115,10 +115,10 @@ def optimizeCValueFast(blockParams, embedObject, code, originalBlock, extraction
 # Author: Nikolaos Vouronikos
 # Description: Running C Optimization Algorithm for each possible grid displacement
 def optimizeCValueFull(blockParams, embedObject, code, originalBlock, extractionIsPrioritized, gridSize, 
-						RBWidth, Rxy, Bxy, imagePath):
+						RBWidth, Rxy, Bxy, imagePath, step):
 
     optimalCValuesForGrid, optimalGridPositions, optimalPSNR, optimalSSIM, extractionResults = [], [], [], [], []
-    candidatePositions = enumerate_grid_positions(blockParams, gridSize)
+    candidatePositions = enumerate_grid_positions(blockParams, gridSize, step)
     for gridPositionForEachBlock in candidatePositions:
         optimalCValue, watermarkedBlock, isExtracted, psnr, ssim = optimizeCValueFast(blockParams, embedObject, code, originalBlock, extractionIsPrioritized,
             																			gridSize, RBWidth, Rxy, Bxy, imagePath, gridPositionForEachBlock)
@@ -136,14 +136,14 @@ def optimizeCValueFull(blockParams, embedObject, code, originalBlock, extraction
     return optimalC, watermarkedBlock, optimalGridPosition
 
 # Author: Nikolaos Vouronikos
-def enumerate_grid_positions(blockParams, gridSize):
+def enumerate_grid_positions(blockParams, gridSize, step):
     positions = []
 
     maxY = blockParams.blockHeight - (gridSize[0] * blockParams.sipSize)
     maxX = blockParams.blockWidth  - (gridSize[1] * blockParams.sipSize)
 
-    for offsetY in range(0, maxY + 1, 1):
-        for offsetX in range(0, maxX + 1, 1):
+    for offsetY in range(0, maxY + 1, step):
+        for offsetX in range(0, maxX + 1, step):
             positions.append([offsetY, offsetX])
 
     return positions
