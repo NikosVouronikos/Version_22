@@ -101,15 +101,50 @@ def getWatermarkedBlock(comCells, index, em, sip, optimalCValue, gridSize, RBWid
 	return g_cell, watermarkedBlock
 
 # Author: Nikolaos Vouronikos
+def getWatermarkedFolderName(watermarkedImageName):
+
+    name = watermarkedImageName.lower()
+
+    if "_720_" in name or "720p" in name:
+        return os.path.join("watermarked", "720p")
+
+    elif "_1024_" in name or "1024p" in name:
+        return os.path.join("watermarked", "1024p")
+
+    elif "_1080_" in name or "1080p" in name:
+        return os.path.join("watermarked", "1080p")
+
+    elif "_1440_" in name or "1440p" in name:
+        return os.path.join("watermarked", "1440p")
+
+    elif "_r_" in name or name.endswith("_r"):
+        return os.path.join("watermarked", "R")
+
+    else:
+        return "watermarked"
+
+
+# Author: Nikolaos Vouronikos
 def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
+
+    import os
+    import subprocess
+    import numpy as np
+
     script_directory = os.path.dirname(os.path.abspath(__file__))
-    watermarked_path = os.path.join(script_directory, "watermarked")
+
+    folderName = getWatermarkedFolderName(watermarkedImageName)
+
+    watermarked_path = os.path.join(script_directory, folderName)
+
     subpath = os.path.join(watermarked_path, watermarkedImageName)
 
     os.makedirs(subpath, exist_ok=True)
 
-    # Force PNG because it is lossless
-    output_path = os.path.join(subpath, watermarkedImageName + ".png")
+    output_path = os.path.join(
+        subpath,
+        watermarkedImageName + ".png"
+    )
 
     if os.path.exists(output_path):
         os.remove(output_path)
@@ -123,12 +158,15 @@ def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
 
     if len(imageArray.shape) == 3 and imageArray.shape[2] == 3:
         pixel_format = "rgb24"
+
     elif len(imageArray.shape) == 3 and imageArray.shape[2] == 4:
         pixel_format = "rgba"
+
     else:
         pixel_format = "gray"
 
     try:
+
         cmd = [
             "ffmpeg",
             "-y",
@@ -141,7 +179,7 @@ def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
             output_path
         ]
 
-        process = subprocess.run(
+        subprocess.run(
             cmd,
             input=imageArray.tobytes(),
             stdout=subprocess.PIPE,
@@ -150,20 +188,37 @@ def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
         )
 
     except FileNotFoundError:
+
         print("FFmpeg not found. Falling back to PIL...")
-        watermarkedImage.save(output_path, format="PNG")
+
+        watermarkedImage.save(
+            output_path,
+            format="PNG"
+        )
 
     except subprocess.CalledProcessError as e:
+
         print("FFmpeg error:")
         print(e.stderr.decode(errors="ignore"))
-        print("Falling back to PIL...")
-        watermarkedImage.save(output_path, format="PNG")
 
-    mapping_path = os.path.join(subpath, "Code_Mapping.txt")
+        print("Falling back to PIL...")
+
+        watermarkedImage.save(
+            output_path,
+            format="PNG"
+        )
+
+    mapping_path = os.path.join(
+        subpath,
+        "Code_Mapping.txt"
+    )
 
     with open(mapping_path, "w+") as mapping:
+
         for key in dictionary:
-            mapping.write(str(key) + "," + str(dictionary[key]) + "\n")
+            mapping.write(
+                str(key) + "," + str(dictionary[key]) + "\n"
+            )
 
     return subpath
 
