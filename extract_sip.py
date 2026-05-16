@@ -98,7 +98,7 @@ class ExtractPermutation:
 			for r in range(moves[0], ((gridSize[0] * SIZE) + moves[0]), (gridSize[0])):
 				for c in range(moves[1], ((gridSize[0] * SIZE) + moves[1]), (gridSize[0])):
 					grid_cell_num += 1
-					AVG_RED,AVG_BLUE = 0,0,0
+					AVG_RED,AVG_BLUE = 0,0
 					
 					grid_cell = channel_array[r:r + gridSize[0],c:c + gridSize[1]]
 					mag,phase = self.getFFTTransform(grid_cell)

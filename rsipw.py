@@ -53,7 +53,7 @@ def embed(code, mode, imagePath, imageName, extension, step):
 				if(index == 0):
 					gridSize, RBWidth, Rxy, Bxy = calculateBasicValues(blockProperties, 2, 2, blockImage, em)
 
-				optimalCValue, watermarkedBlock, optimalGridPosition = findOptimalCValueForBlock(blockProperties, em, code, blockImage, mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName, step)	# Begin C Optimization for Block
+				optimalCValue, watermarkedBlock, optimalGridPosition, counterPositions = findOptimalCValueForBlock(blockProperties, em, code, blockImage, mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName, step)	# Begin C Optimization for Block
 				optimalGridPositionForEachBlock.append(optimalGridPosition), optimalCValues.append(optimalCValue), watermarkedBlocks.append(watermarkedBlock)
 				index = index + 1
 
@@ -63,6 +63,7 @@ def embed(code, mode, imagePath, imageName, extension, step):
 		writeBasicValuesInFile(gridSize, RBWidth, Rxy, Bxy, subpath)
 		writeGridPositionsInFile(optimalGridPositionForEachBlock, subpath)
 		getPSNRAndSSIM(np.array(watermarkedImage), imageArray)
+		print("Total positions checked for each block : " + str(counterPositions))
 		embedResult = EmbedResult(watermarkedImage,watermarkedBlocks,codeSips,mapping,innerSips,subpath,optimalCValues,gridSize,RBWidth,Rxy,Bxy,optimalGridPositionForEachBlock)
 		return embedResult
 	except Exception as e:
@@ -99,10 +100,10 @@ def findOptimalCValueForBlock(blockParams, embedObject, code, g_cell,
 			optimalCValue,watermarkedBlock,isExtracted,psnr,ssim = optimizeCValueFast(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, randomGridPosition)
 			if(isExtracted == False):
 				badPositions.append(randomGridPosition)
-		return optimalCValue,watermarkedBlock,randomGridPosition
+		return optimalCValue,watermarkedBlock,randomGridPosition,0
 	else:
-		optimalCValue,watermarkedBlock,optimalGridPosition = optimizeCValueFull(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, step)
-		return optimalCValue,watermarkedBlock,optimalGridPosition
+		optimalCValue,watermarkedBlock,optimalGridPosition,counterPositions = optimizeCValueFull(blockParams, embedObject, code, g_cell, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, step)
+		return optimalCValue,watermarkedBlock,optimalGridPosition,counterPositions
 
 # Author: Nikolaos Vouronikos
 # Description: Run function starts embed procedure

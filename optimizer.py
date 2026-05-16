@@ -119,6 +119,7 @@ def optimizeCValueFull(blockParams, embedObject, code, originalBlock, extraction
 
     optimalCValuesForGrid, optimalGridPositions, optimalPSNR, optimalSSIM, extractionResults = [], [], [], [], []
     candidatePositions = enumerate_grid_positions(blockParams, gridSize, step)
+    countPositions = 0
     for gridPositionForEachBlock in candidatePositions:
         optimalCValue, watermarkedBlock, isExtracted, psnr, ssim = optimizeCValueFast(blockParams, embedObject, code, originalBlock, extractionIsPrioritized,
             																			gridSize, RBWidth, Rxy, Bxy, imagePath, gridPositionForEachBlock)
@@ -128,12 +129,13 @@ def optimizeCValueFull(blockParams, embedObject, code, originalBlock, extraction
         optimalSSIM.append(ssim)
         optimalGridPositions.append(gridPositionForEachBlock)
         printResults(2, optimalCValue, 0, 0, [])
+        countPositions = countPositions + 1
 
     optimalC, maxPSNR, maxSSIM, optimalGridPosition = findOptimalPropertiesForBlock(optimalPSNR, optimalSSIM, extractionResults, optimalGridPositions, optimalCValuesForGrid)
     printResults(1, optimalC, maxPSNR, maxSSIM, optimalGridPosition)
     watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalC, 2, 2,
         												gridSize, RBWidth, Rxy, Bxy, optimalGridPosition)
-    return optimalC, watermarkedBlock, optimalGridPosition
+    return optimalC, watermarkedBlock, optimalGridPosition, countPositions
 
 # Author: Nikolaos Vouronikos
 def enumerate_grid_positions(blockParams, gridSize, step):
