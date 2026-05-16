@@ -108,7 +108,7 @@ def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, 
 	codeTaken,totalWatermarksExtracted = [],totalWatermarks
 	for i in range(len(watermarkedBlocks)):
 		watermarkedBlock,sip,bestMove,enable = watermarkedBlocks[i],codeSips[i],allGridPositions[i],1
-		isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, sip, innerSips[i], gridSize, RBWidth, Rxy, Bxy, bestMove)
+		isExtracted,key1,key2,key3,ber = extractSiP(watermarkedBlock, sip, innerSips[i], gridSize, RBWidth, Rxy, Bxy, bestMove)
 		decodedKey = decodeKey(key1, key2, key3, sip)
 		if(decodedKey == "X"):
 			enable = 0

@@ -20,10 +20,10 @@ def get_step_from_group(group):
         return "70"
 
     elif group == "1080p":
-        return "100"
+        return "120"
 
     elif group == "1440p":
-        return "150"
+        return "140"
 
     elif group == "R":
         return "60"
@@ -83,6 +83,11 @@ def parse_metrics(stdout):
         r"Extraction percentage\s*=\s*([0-9.]+)%",
         stdout
     )
+    
+    average_ber = parse_float(
+    r"Average BER\s*=\s*([0-9.]+)",
+    stdout
+)
 
     elapsed_mins = parse_float(
         r"Elapsed time\s*=\s*([0-9.]+)\s*mins",
@@ -98,6 +103,7 @@ def parse_metrics(stdout):
         "psnr": final_psnr,
         "ssim": final_ssim,
         "extraction_rate": extraction_rate,
+        "average_ber": average_ber,
         "elapsed_mins": elapsed_mins,
         "elapsed_secs": elapsed_secs,
     }
@@ -260,6 +266,7 @@ def main():
             "avg_psnr": safe_mean([row["psnr"] for row in group_rows]),
             "avg_ssim": safe_mean([row["ssim"] for row in group_rows]),
             "avg_extraction_rate": safe_mean([row["extraction_rate"] for row in group_rows]),
+            "avg_ber": safe_mean([row["average_ber"] for row in group_rows]),
             "avg_elapsed_mins": safe_mean([row["elapsed_mins"] for row in group_rows]),
             "avg_elapsed_secs": safe_mean([row["elapsed_secs"] for row in group_rows]),
             "avg_runtime_secs_by_batch": safe_mean([row["runtime_secs_by_batch"] for row in group_rows]),
@@ -282,6 +289,7 @@ def main():
             "psnr",
             "ssim",
             "extraction_rate",
+            "average_ber",
             "elapsed_mins",
             "elapsed_secs",
             "runtime_secs_by_batch",
@@ -298,6 +306,7 @@ def main():
             "avg_psnr",
             "avg_ssim",
             "avg_extraction_rate",
+            "avg_ber",
             "avg_elapsed_mins",
             "avg_elapsed_secs",
             "avg_runtime_secs_by_batch",

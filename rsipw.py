@@ -14,10 +14,10 @@ from metrics import *
 # Description: Extract user's code-sequence from watermarked image
 # Output: Extraction Object
 def extract(embedResult):
-	codeTaken,totalWatermarksExtracted = [],16
+	berValues,codeTaken,totalWatermarksExtracted = [],[],9
 	for i in range(len(embedResult.watermarkedBlocks)):
 		watermarkedBlock,sip,optimalGridPosition,innerSip,enable = embedResult.watermarkedBlocks[i],embedResult.codeSips[i],embedResult.optimalGridPositionForEachBlock[i],embedResult.innerSips[i],1
-		isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, sip, innerSip, embedResult.gridSize, embedResult.RBWidth, embedResult.Rxy, embedResult.Bxy, optimalGridPosition)
+		isExtracted,key1,key2,key3,ber = extractSiP(watermarkedBlock, sip, innerSip, embedResult.gridSize, embedResult.RBWidth, embedResult.Rxy, embedResult.Bxy, optimalGridPosition)
 		decodedKey = decodeKey(key1, key2, key3, sip)
 		if(decodedKey == "X"):
 			enable = 0
@@ -25,8 +25,11 @@ def extract(embedResult):
 			totalWatermarksExtracted = totalWatermarksExtracted - 1
 		else:
 			codeTaken.append(embedResult.mapping[decodedKey])
+		berValues.append(ber)
 		printResults(3, i, enable, 0, [])
-	extractionRate = (totalWatermarksExtracted / 16)*100
+	averageBER = sum(berValues) / len(berValues)
+	print("Average BER =", averageBER)
+	extractionRate = (totalWatermarksExtracted / 9)*100
 	extractionResult = ExtractionResult(codeTaken, extractionRate)
 	return extractionResult
 
@@ -80,9 +83,15 @@ def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, 
 	key1 = decodeSip(sip1)
 	key2 = decodeSip(sip2)
 	key3 = decodeSip(sip3)
+ 
+	ber1 = SIP_to_BER(innerSip, sip1)
+	ber2 = SIP_to_BER(innerSip, sip2)
+	ber3 = SIP_to_BER(innerSip, sip3)
+	bestBER = min(ber1, ber2, ber3)
+ 
 	if(key1 == originalKey or key2 == originalKey or key3 == originalKey) :
-		return 1,key1,key2,key3
-	return 0,key1,key2,key3
+		return 1,key1,key2,key3,bestBER
+	return 0,key1,key2,key3,bestBER
 
 # Author: Nikolaos Vouronikos
 # Description: Run C Optimization Algorithm for block (Fast or Full)
