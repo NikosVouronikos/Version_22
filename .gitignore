@@ -15,3 +15,5 @@ dumb/*
 *.ipynb
 *.tmp.driveupload
 *.DS_Store
+__pycache__/
+*.py[cod]
