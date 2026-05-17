@@ -14,7 +14,7 @@ from metrics import *
 # Description: Extract user's code-sequence from watermarked image
 # Output: Extraction Object
 def extract(embedResult):
-	berValues,codeTaken,totalWatermarksExtracted = [],[],9
+	codeTaken,totalWatermarksExtracted = [],len(embedResult.watermarkedBlocks)
 	for i in range(len(embedResult.watermarkedBlocks)):
 		watermarkedBlock,sip,optimalGridPosition,innerSip,enable = embedResult.watermarkedBlocks[i],embedResult.codeSips[i],embedResult.optimalGridPositionForEachBlock[i],embedResult.innerSips[i],1
 		isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, sip, innerSip, embedResult.gridSize, embedResult.RBWidth, embedResult.Rxy, embedResult.Bxy, optimalGridPosition)
@@ -25,11 +25,8 @@ def extract(embedResult):
 			totalWatermarksExtracted = totalWatermarksExtracted - 1
 		else:
 			codeTaken.append(embedResult.mapping[decodedKey])
-		berValues.append(ber)
 		printResults(3, i, enable, 0, [])
-	averageBER = sum(berValues) / len(berValues)
-	print("Average BER =", averageBER)
-	extractionRate = (totalWatermarksExtracted / 9)*100
+	extractionRate = (totalWatermarksExtracted / len(embedResult.watermarkedBlocks))*100 if len(embedResult.watermarkedBlocks) > 0 else 0
 	extractionResult = ExtractionResult(codeTaken, extractionRate)
 	return extractionResult
 
