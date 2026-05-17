@@ -27,7 +27,7 @@ def extract(embedResult):
 			codeTaken.append(embedResult.mapping[decodedKey])
 		printResults(3, i, enable, 0, [])
 	extractionRate = (totalWatermarksExtracted / len(embedResult.watermarkedBlocks))*100 if len(embedResult.watermarkedBlocks) > 0 else 0
-	extractionResult = ExtractionResult(codeTaken, extractionRate)
+	extractionResult = ExtractionResult(codeTaken, extractionRate, 0)
 	return extractionResult
 
 # Author: Nikolaos Vouronikos
