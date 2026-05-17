@@ -71,7 +71,7 @@ def checkForFullCode(code, originalLength):
 	diff = originalLength - len(code)
 	if(len(code) < originalLength):
 		for i in range(diff):
-			code.append(random.randint(0,9))
+			code.append(random.randint(0,7))
 	else:
 		code = code[0:originalLength]
 	return code
