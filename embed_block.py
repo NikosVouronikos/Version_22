@@ -13,7 +13,7 @@ from metrics import *
 # Description: This script embeds a watermark into an image block and extracts it back.
 
 def extract(watermarkedBlock, innerKey, mapping, innerSip, gridSize, RBWidth, Rxy, Bxy, blockIndex, imagePath, optimalGridPosition):
-	isExtracted,key1,key2,key3,ber = extractSiP(watermarkedBlock, innerKey, innerSip, gridSize, RBWidth, Rxy, Bxy, optimalGridPosition)
+	isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, innerKey, innerSip, gridSize, RBWidth, Rxy, Bxy, optimalGridPosition)
 	decodedKey = decodeKey(key1, key2, key3, innerKey)
 	if(decodedKey == "X"):
 		return False

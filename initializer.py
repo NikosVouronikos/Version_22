@@ -32,9 +32,10 @@ class EmbedResult:
 		self.optimalGridPositionForEachBlock = optimalGridPositionForEachBlock
 
 class ExtractionResult:
-	def __init__(self, codeTaken, extractionRate):
+	def __init__(self, codeTaken, extractionRate, ber):
 		self.codeTaken = codeTaken
 		self.extractionRate = extractionRate
+		self.ber = ber
 
 # Author: Vasileios Vouronikos
 def init():

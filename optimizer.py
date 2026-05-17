@@ -182,7 +182,7 @@ def getPSNRAndSSIM(originalBlock, watermarkedBlock):
 
 # Author: Nikolaos Vouronikos
 def getExtractionResult(watermarkedBlock, compressedImageName, innerKey, sip, code, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock):
-	isExtracted,key1,key2,key3,ber = extractSiP(watermarkedBlock, innerKey, sip, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
+	isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, innerKey, sip, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
 	print("Result of extraction =",isExtracted)
 	print("")
 	return isExtracted

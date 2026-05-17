@@ -6,8 +6,10 @@ from initializer import openImage,init
 from encodeinteger import encodeInteger
 from decodesip import decodeSip
 from optimizer import printResults
+from recossip import recsip
 from utilities import decodeKey
 from initializer import ExtractionResult
+from metrics import *
 
 # Author: Nikolaos Vouronikos
 def getWatermarkedBlocksInList(code, imagePath):
@@ -105,10 +107,10 @@ def getGridPositions(code, imagePath):
 # Author: Nikolaos Vouronikos
 def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, Rxy, Bxy, allGridPositions):
 	totalWatermarks = len(watermarkedBlocks)
-	codeTaken,totalWatermarksExtracted = [],totalWatermarks
+	codeTaken,totalWatermarksExtracted,error = [],totalWatermarks,0
 	for i in range(len(watermarkedBlocks)):
 		watermarkedBlock,sip,bestMove,enable = watermarkedBlocks[i],codeSips[i],allGridPositions[i],1
-		isExtracted,key1,key2,key3,ber = extractSiP(watermarkedBlock, sip, innerSips[i], gridSize, RBWidth, Rxy, Bxy, bestMove)
+		isExtracted,key1,key2,key3,min_error = extractSiP(watermarkedBlock, sip, innerSips[i], gridSize, RBWidth, Rxy, Bxy, bestMove)
 		decodedKey = decodeKey(key1, key2, key3, sip)
 		if(decodedKey == "X"):
 			enable = 0
@@ -117,21 +119,52 @@ def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, 
 		else:
 			codeTaken.append(mapping[decodedKey])
 		printResults(3, i, enable, 0, [])
+		error = error + min_error
+
+	ber = (error / (totalWatermarks * len(innerSips[0]) * 4))
 	extractionRate = (totalWatermarksExtracted / totalWatermarks)*100 if totalWatermarks > 0 else 0
-	extractionResult = ExtractionResult(codeTaken, extractionRate)
+	extractionResult = ExtractionResult(codeTaken, extractionRate, ber)
 	return extractionResult
 
 # Author: Nikolaos Vouronikos
-def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock):
+def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock,recoEnabled = 0):
 	em,ex = init()
 	sip1,sip2,sip3 = ex.getSip(watermarkedBlock, len(innerSip), gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
-	print("Key which was embeded :", originalKey)
-	key1 = decodeSip(sip1)
-	key2 = decodeSip(sip2)
-	key3 = decodeSip(sip3)
-	if(key1 == originalKey or key2 == originalKey or key3 == originalKey) :
-		return 1,key1,key2,key3
-	return 0,key1,key2,key3
+ 
+	if(recoEnabled):
+		r1 = recsip(sip1, innerSip, originalKey)
+		r2 = recsip(sip2, innerSip, originalKey)
+		r3 = recsip(sip3, innerSip, originalKey)
+
+		error_bits1 = min(SIP_to_BER(sip1, innerSip), SIP_to_BER(r1, innerSip))
+		error_bits2 = min(SIP_to_BER(sip2, innerSip), SIP_to_BER(r2, innerSip))
+		error_bits3 = min(SIP_to_BER(sip3, innerSip), SIP_to_BER(r3, innerSip))
+	else:
+		error_bits1 = SIP_to_BER(sip1, innerSip)
+		error_bits2 = SIP_to_BER(sip2, innerSip)
+		error_bits3 = SIP_to_BER(sip3, innerSip)
+	
+	print(error_bits1, error_bits2, error_bits3)
+	min_error = min(error_bits1, error_bits2, error_bits3)
+ 
+	if(recoEnabled):
+		if(sip1 == innerSip or r1 == innerSip):
+			return 1,decodeSip(innerSip),decodeSip(innerSip),decodeSip(innerSip),min_error
+		elif(sip2 == innerSip or r2 == innerSip):
+			return 1,decodeSip(innerSip),decodeSip(innerSip),decodeSip(innerSip),min_error
+		elif(sip3 == innerSip or r3 == innerSip):
+			return 1,decodeSip(innerSip),decodeSip(innerSip),decodeSip(innerSip),min_error
+		else:
+			return 0,decodeSip(sip1),decodeSip(sip2),decodeSip(sip3),min_error
+	else:
+		if(sip1 == innerSip):
+			return 1,decodeSip(sip1),decodeSip(sip1),decodeSip(sip1),min_error
+		elif(sip2 == innerSip):
+			return 1,decodeSip(sip2),decodeSip(sip2),decodeSip(sip2),min_error
+		elif(sip3 == innerSip):		
+			return 1,decodeSip(sip3),decodeSip(sip3),decodeSip(sip3),min_error
+		else:
+			return 0,decodeSip(sip1),decodeSip(sip2),decodeSip(sip3),min_error
 
 def runValidation(imagePath, code):
     code = getListFromCode(code)
@@ -144,7 +177,8 @@ def runValidation(imagePath, code):
     extractionResult = extract(watermarkedBlocks, codeSiPs, mapping, innerSiPs, gridSize, RBWidth, Rxy, Bxy, allGridPositions)
     print(str(extractionResult.codeTaken) + "\n")
     print(str(extractionResult.extractionRate) + "%")
-
+    print(str(extractionResult.ber))
+    
 if __name__ == '__main__':
 	# Initialization from command line
 	# Example: py validator.py watermarked/watermarked_people/watermarked_people.jpg 112230765
