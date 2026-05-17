@@ -29,8 +29,11 @@ def ensure_dir(path):
 
 def parse_float(pattern, text):
     match = re.search(pattern, text)
+
     if match:
-        return float(match.group(1))
+        value = match.group(1).replace(",", ".")
+        return float(value)
+
     return None
 
 
@@ -107,15 +110,25 @@ def extract_attack_info(path):
 
 
 def parse_validator_output(output):
-    # validator.py usually prints BER first and extraction rate at the end.
-    ber = parse_float(r"BER\s*=\s*([0-9.]+)", output)
-    if ber is None:
-        ber = parse_float(r"Average BER\s*=\s*([0-9.]+)", output)
-
-    rates = re.findall(r"([0-9.]+)\s*%", output)
-    extraction_rate = float(rates[-1]) if rates else None
-
+    ber = None
+    extraction_rate = None
     extracted_code = None
+
+    for line in output.splitlines():
+        clean = line.strip()
+
+        # BER line
+        if "ber" in clean.lower():
+            nums = re.findall(r"[0-9]+(?:[.,][0-9]+)?", clean)
+            if nums:
+                ber = float(nums[-1].replace(",", "."))
+
+        # Extraction rate line
+        if "%" in clean:
+            nums = re.findall(r"[0-9]+(?:[.,][0-9]+)?", clean)
+            if nums:
+                extraction_rate = float(nums[-1].replace(",", "."))
+
     matches = re.findall(r"\[[^\]]+\]", output)
     if matches:
         extracted_code = matches[-1]
@@ -279,6 +292,38 @@ def parse_args(argv):
 
     return code, validator, attacked, output, reco
 
+def write_aggregate_csv(csv_path, aggregate):
+
+    header = [
+        "group",
+        "category",
+        "attack_type",
+        "attack_level",
+        "count",
+        "avg_extraction_rate_percent",
+        "avg_ber"
+    ]
+
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=header)
+        writer.writeheader()
+
+        for row in aggregate:
+
+            row["avg_extraction_rate_percent"] = (
+                round(row["avg_extraction_rate_percent"], 2)
+                if row["avg_extraction_rate_percent"] is not None
+                else None
+            )
+
+            row["avg_ber"] = (
+                round(row["avg_ber"], 4)
+                if row["avg_ber"] is not None
+                else None
+            )
+
+            writer.writerow(row)
+
 
 def main():
     code, validator_path, attacked_root, output_root, reco = parse_args(sys.argv)
@@ -313,14 +358,38 @@ def main():
             "attacked_image_name": image_name,
             "attacked_image_path": os.path.abspath(image_path),
             "return_code": result["return_code"],
-            "extraction_rate_percent": result["extraction_rate_percent"],
-            "ber": result["ber"],
-            "extracted_code": result["extracted_code"]
+            "extraction_rate_percent":
+                round(result["extraction_rate_percent"], 2)
+                if result["extraction_rate_percent"] is not None
+                else None,
+            "ber":
+                round(result["ber"], 4)
+                if result["ber"] is not None
+                else None,
+                    "extracted_code": result["extracted_code"]
         }
         rows.append(row)
-        print(f"  return={row['return_code']} | ER={row['extraction_rate_percent']} | BER={row['ber']}")
+        er_str = (
+            f"{row['extraction_rate_percent']:.2f}"
+            if row['extraction_rate_percent'] is not None
+            else "None"
+        )
+
+        ber_str = (
+            f"{row['ber']:.4f}"
+            if row['ber'] is not None
+            else "None"
+        )
+
+        print(
+            f"  return={row['return_code']} | "
+            f"ER={er_str}% | "
+            f"BER={ber_str}"
+        )
 
     aggregate = aggregate_results(rows)
+    aggregate_csv = os.path.join(output_root,"aggregate_attack_results.csv")
+    write_aggregate_csv(aggregate_csv, aggregate)
     write_csv(csv_path, rows)
     write_json(json_path, rows, aggregate)
     write_summary(txt_path, rows, aggregate)

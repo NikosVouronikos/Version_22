@@ -127,7 +127,7 @@ def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, 
 	return extractionResult
 
 # Author: Nikolaos Vouronikos
-def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock,recoEnabled = 0):
+def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock,recoEnabled = 1):
 	em,ex = init()
 	sip1,sip2,sip3 = ex.getSip(watermarkedBlock, len(innerSip), gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
  
@@ -177,7 +177,7 @@ def runValidation(imagePath, code):
     extractionResult = extract(watermarkedBlocks, codeSiPs, mapping, innerSiPs, gridSize, RBWidth, Rxy, Bxy, allGridPositions)
     print(str(extractionResult.codeTaken) + "\n")
     print(str(extractionResult.extractionRate) + "%")
-    print(str(extractionResult.ber))
+    print("BER =", str(extractionResult.ber))
     
 if __name__ == '__main__':
 	# Initialization from command line
