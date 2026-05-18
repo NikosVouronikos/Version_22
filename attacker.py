@@ -337,8 +337,8 @@ def resize_attack(image_path,image_name,output_dir,scale_percent):
     new_width = max(1,int(width * scale_percent / 100))
     new_height = max(1,int(height * scale_percent / 100))
 
-    downscaled = cv2.resize(wImage,(new_width, new_height),interpolation=cv2.INTER_AREA)
-    upscaled = cv2.resize(downscaled,(width, height),interpolation=cv2.INTER_LINEAR)
+    downscaled = cv2.resize(wImage,(new_width, new_height),interpolation=cv2.INTER_LANCZOS4)
+    upscaled = cv2.resize(downscaled,(width, height),interpolation=cv2.INTER_LANCZOS4)
     out_path = os.path.join(output_dir,attacked_name)
     save_image_ffmpeg(upscaled,out_path)
     return out_path
@@ -354,7 +354,7 @@ def rotation_attack(image_path,image_name,output_dir,angle):
     height, width = wImage.shape[:2]
     center = (width // 2,height // 2)
     rotation_matrix = cv2.getRotationMatrix2D(center,angle,1.0)
-    rotated = cv2.warpAffine(wImage,rotation_matrix,(width, height),flags=cv2.INTER_LINEAR,borderMode=cv2.BORDER_REFLECT)
+    rotated = cv2.warpAffine(wImage,rotation_matrix,(width, height),flags=cv2.INTER_LANCZOS4,borderMode=cv2.BORDER_REFLECT)
 
     out_path = os.path.join(output_dir,attacked_name)
     save_image_ffmpeg(rotated,out_path)
