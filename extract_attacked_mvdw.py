@@ -58,6 +58,7 @@ def extract_attack_info(path):
     lower = normalized.lower()
 
     category = "Unknown"
+
     if "/crops/" in lower:
         category = "Crops"
     elif "/filters/" in lower:
@@ -66,36 +67,35 @@ def extract_attack_info(path):
         category = "Resize"
     elif "/geometric/" in lower:
         category = "Geometric"
-    elif "/frequency/" in lower:
-        category = "Frequency"
 
     name = os.path.basename(path)
+
+    patterns = [
+        ("jpeg", r"Compressed_q([0-9]+)_"),
+        ("gaussian_noise", r"GN_lvl([0-9.]+)_"),
+        ("salt_pepper", r"SaP_p([0-9.]+)_"),
+        ("gaussian_blur", r"GB_k([0-9]+)_"),
+        ("median_filter", r"MF_k([0-9]+)_"),
+        ("motion_blur", r"MB_k([0-9]+)_"),
+        ("histogram_equalization", r"HEQ_"),
+        ("gamma", r"Gamma_"),
+        ("sharpening", r"SHARP_"),
+        ("resize", r"RESIZE_([0-9]+)_"),
+        ("rotation", r"ROT_(-?[0-9]+)_"),
+        ("translation", r"TRANS_x([0-9]+)_y([0-9]+)_"),
+        ("horizontal_flip", r"HFLIP_"),
+        ("crop", r"Croped_([A-Za-z]+)_([0-9]+)_"),
+    ]
+
     attack_type = "unknown"
     attack_level = ""
 
-    patterns = [
-        ("jpeg", r"JPEG_q([0-9]+)"),
-        ("gaussian_noise", r"GN_std([0-9.]+)"),
-        ("salt_pepper", r"SaP_p([0-9.]+)"),
-        ("gaussian_blur", r"GB_k([0-9]+)"),
-        ("median_filter", r"MF_k([0-9]+)"),
-        ("histogram_equalization", r"HEQ_"),
-        ("gamma", r"GAMMA_([0-9.]+)"),
-        ("motion_blur", r"MB_k([0-9]+)"),
-        ("sharpening", r"SHARP_"),
-        ("resize", r"RESIZE_([0-9]+)"),
-        ("rotation", r"ROT_(-?[0-9]+)"),
-        ("translation", r"TRANS_x([0-9]+)_y([0-9]+)"),
-        ("horizontal_flip", r"HFLIP_"),
-        ("crop", r"CROP_([A-Za-z]+)_([0-9]+)"),
-        ("fourier_noise", r"FT_RAND_NOISE_([0-9.]+)"),
-        ("phase_noise", r"PHASE_NOISE_([0-9.]+)"),
-    ]
-
     for atype, pattern in patterns:
         match = re.search(pattern, name)
+
         if match:
             attack_type = atype
+
             if atype == "translation":
                 attack_level = f"x{match.group(1)}_y{match.group(2)}"
             elif atype == "crop":
@@ -104,6 +104,7 @@ def extract_attack_info(path):
                 attack_level = match.group(1)
             else:
                 attack_level = ""
+
             break
 
     return category, attack_type, attack_level
