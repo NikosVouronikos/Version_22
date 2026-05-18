@@ -436,7 +436,9 @@ def attack_one_image(group,image_path,image_name,attacked_root):
 
     histogram_equalization_attack(image_path,image_name,filters_dir)
     gamma_attack(image_path,image_name,filters_dir)
-    motion_blur_attack(image_path,image_name,filters_dir)
+    for kernel_size in [3, 5, 7]:
+        motion_blur_attack(image_path,image_name,filters_dir,kernel_size)
+        
     sharpen_attack(image_path,image_name,filters_dir)
 
     # --------------------------------------------------------
