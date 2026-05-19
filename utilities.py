@@ -288,7 +288,7 @@ def getGridSize(em, imageArray, Rxy, Bxy, RBWidth):
 		else:
 			break
 
-	return [mingrix+1, mingridy+1]
+	return [mingrix, mingridy]
 
 # Author: Nikolaos Vouronikos
 # Description: Reconstruct final image by placing watermarked blocks

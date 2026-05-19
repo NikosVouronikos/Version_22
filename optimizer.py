@@ -9,17 +9,18 @@ from rsipw import extractSiP
 def optimizeCValueFast(blockParams, embedObject, code, originalBlock, extractionIsPrioritized, gridSize, 
 						RBWidth, Rxy, Bxy, imagePath, gridPositionForEachBlock):
 
-	low,high = 0,100
+	# enforce minimum C value
+	low,high = 30,100
 	originalHigh,optimalCValue,isExtractedPrevious,stop,psnr,ssim,isExtracted,completeExtractions = high,high,0,0,0,0,0,[]
 
-	print("Running with c = 1")
-	watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, 1, 2, 2, 
+	print("Running with c = " + str(low))
+	watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, low, 2, 2, 
 														gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
 	psnr,ssim = getPSNRAndSSIM(originalBlock, watermarkedBlock)
 	isExtracted = getExtractionResult(watermarkedBlock, imagePath, blockParams.key, blockParams.sip, code, 
 										gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
 	if(isExtracted == 1):
-		return 1,watermarkedBlock,isExtracted,psnr,ssim
+		return low,watermarkedBlock,isExtracted,psnr,ssim
 
 	while(low <= high):
 		print("Running with c = " + str(optimalCValue))
@@ -105,8 +106,8 @@ def optimizeCValueFast(blockParams, embedObject, code, originalBlock, extraction
 				if(optimalCValuePrevious == optimalCValue) :
 					break
 			if(not isSuccessfullExtraction(isExtracted)):
-				print("Running with c = 1")
-				optimalCValue = 1
+				optimalCValue = 30
+				print("Running with c = " + str(optimalCValue))
 				watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalCValue, 2, 2, 
 																	gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
 	printResults(2, optimalCValue, 0, 0, [])
@@ -252,7 +253,8 @@ def printResults(mode, c, psnr, ssim, bm):
 # Helper functions		
 # Author: Nikolaos Vouronikos
 def hasCValueLowestLimit(optimalCValue):
-	if(optimalCValue == 0):
+	# consider 30 as the minimum allowed C value
+	if(optimalCValue <= 30):
 		return True
 	return False
 

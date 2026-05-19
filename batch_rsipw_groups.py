@@ -14,16 +14,16 @@ VALID_EXTENSIONS = {".png", ".jpg", ".jpeg"}
 def get_step_from_group(group):
 
     if group == "720p":
-        return "50"
+        return "40"
 
     elif group == "1024p":
-        return "70"
+        return "60"
 
     elif group == "1080p":
-        return "120"
+        return "100"
 
     elif group == "1440p":
-        return "140"
+        return "120"
 
     elif group == "R":
         return "60"
