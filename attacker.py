@@ -443,7 +443,7 @@ def attack_one_image(group,image_path,image_name,attacked_root):
         gaussian_noise_attack(image_path,image_name,filters_dir,noise_level)
 
     #Compression
-    for quality in [50, 70, 90]:
+    for quality in [70, 80, 90]:
         compression_attack(image_path,image_name,filters_dir,quality)
 
     #Gaussian Blur
