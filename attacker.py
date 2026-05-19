@@ -490,7 +490,7 @@ def attack_one_image(group,image_path,image_name,attacked_root):
     for angle in [5, 10, -10]:
         rotation_attack(image_path,image_name,geometric_dir,angle)
 
-    for shift in [5, 10]:
+    for shift in [2, 4]:
         translation_attack(image_path,image_name,geometric_dir,shift,shift)
 
     horizontal_flip_attack(image_path,image_name,geometric_dir)
