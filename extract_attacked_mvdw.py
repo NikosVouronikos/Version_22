@@ -84,6 +84,7 @@ def extract_attack_info(path):
         ("rotation", r"ROT_(-?[0-9]+)_"),
         ("translation", r"TRANS_x([0-9]+)_y([0-9]+)_"),
         ("horizontal_flip", r"HFLIP_"),
+        ("mean_filter", r"MEAN_k([0-9]+)_"),
         ("crop", r"Croped_([A-Za-z]+)_([0-9]+)_"),
     ]
 

@@ -10,7 +10,7 @@ def optimizeCValueFast(blockParams, embedObject, code, originalBlock, extraction
 						RBWidth, Rxy, Bxy, imagePath, gridPositionForEachBlock):
 
 	# enforce minimum C value
-	low,high = 30,100
+	low,high = 40,120
 	originalHigh,optimalCValue,isExtractedPrevious,stop,psnr,ssim,isExtracted,completeExtractions = high,high,0,0,0,0,0,[]
 
 	print("Running with c = " + str(low))
@@ -106,7 +106,7 @@ def optimizeCValueFast(blockParams, embedObject, code, originalBlock, extraction
 				if(optimalCValuePrevious == optimalCValue) :
 					break
 			if(not isSuccessfullExtraction(isExtracted)):
-				optimalCValue = 30
+				optimalCValue = 40
 				print("Running with c = " + str(optimalCValue))
 				watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalCValue, 2, 2, 
 																	gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
@@ -144,9 +144,10 @@ def enumerate_grid_positions(blockParams, gridSize, step):
 
     maxY = blockParams.blockHeight - (gridSize[0] * blockParams.sipSize)
     maxX = blockParams.blockWidth  - (gridSize[1] * blockParams.sipSize)
+    jump = step + 1
 
-    for offsetY in range(0, maxY + 1, step):
-        for offsetX in range(0, maxX + 1, step):
+    for offsetY in range(0, maxY + 1, jump):
+        for offsetX in range(0, maxX + 1, jump):
             positions.append([offsetY, offsetX])
 
     return positions
@@ -253,8 +254,8 @@ def printResults(mode, c, psnr, ssim, bm):
 # Helper functions		
 # Author: Nikolaos Vouronikos
 def hasCValueLowestLimit(optimalCValue):
-	# consider 30 as the minimum allowed C value
-	if(optimalCValue <= 30):
+	# consider 40 as the minimum allowed C value
+	if(optimalCValue <= 40):
 		return True
 	return False
 

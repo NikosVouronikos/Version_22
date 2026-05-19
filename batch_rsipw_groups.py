@@ -11,25 +11,6 @@ from statistics import mean
 GROUPS = ["R", "720p", "1024p", "1080p", "1440p"]
 VALID_EXTENSIONS = {".png", ".jpg", ".jpeg"}
 
-def get_step_from_group(group):
-
-    if group == "720p":
-        return "40"
-
-    elif group == "1024p":
-        return "60"
-
-    elif group == "1080p":
-        return "100"
-
-    elif group == "1440p":
-        return "120"
-
-    elif group == "R":
-        return "60"
-
-    return "35"
-
 def find_group_folder(dataset_root, group_name):
     candidates = [
         os.path.join(dataset_root, group_name),
@@ -109,7 +90,7 @@ def parse_metrics(stdout):
     }
 
 
-def run_single_image(rsipw_path, image_path, code, mode, step):
+def run_single_image(rsipw_path, image_path, code, mode):
     rsipw_abs = os.path.abspath(rsipw_path)
     rsipw_dir = os.path.dirname(rsipw_abs)
     image_abs = os.path.abspath(image_path)
@@ -119,8 +100,7 @@ def run_single_image(rsipw_path, image_path, code, mode, step):
         rsipw_abs,
         image_abs,
         code,
-        mode,
-        step
+        mode
 ]
 
     start = time.time()
@@ -228,14 +208,11 @@ def main():
         for image_path in image_paths:
             print(f"Running: {image_path}")
 
-            step = get_step_from_group(group)
-
             metrics, output = run_single_image(
                 args.rsipw,
                 image_path,
                 args.code,
-                args.mode,
-                step
+                args.mode
             )
 
             metrics["group"] = group

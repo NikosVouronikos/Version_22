@@ -1,4 +1,4 @@
-import sys, os, numpy as np
+import sys, os, numpy as np,time
 from math import sqrt
 from codeMapping import getBlockDimensions,getListFromCode,getSipsFromCode,isNumericString
 from PIL import Image
@@ -7,7 +7,7 @@ from encodeinteger import encodeInteger
 from decodesip import decodeSip
 from optimizer import printResults
 from recossip import recsip
-from utilities import decodeKey
+from utilities import calculateElapseTime, calculateElapseTime, decodeKey
 from initializer import ExtractionResult
 from metrics import *
 
@@ -167,6 +167,7 @@ def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, 
 			return 0,decodeSip(sip1),decodeSip(sip2),decodeSip(sip3),min_error
 
 def runValidation(imagePath, code):
+    startingPoint = time.time()
     code = getListFromCode(code)
     watermarkedBlocks = getWatermarkedBlocksInList(code, imagePath)
     mapping = getMapping(code, imagePath)
@@ -175,6 +176,10 @@ def runValidation(imagePath, code):
     gridSize,RBWidth,Rxy,Bxy = getBasicValues(imagePath)
     allGridPositions = getGridPositions(code, imagePath)
     extractionResult = extract(watermarkedBlocks, codeSiPs, mapping, innerSiPs, gridSize, RBWidth, Rxy, Bxy, allGridPositions)
+    end = time.time()
+    secSTR,minSTR = calculateElapseTime(startingPoint, end)
+    print("Elapsed time = " + str(minSTR) + " mins")
+    print("Elapsed time = " + str(secSTR) + " seconds")
     print(str(extractionResult.codeTaken) + "\n")
     print(str(extractionResult.extractionRate) + "%")
     print("BER =", str(extractionResult.ber))

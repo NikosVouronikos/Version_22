@@ -274,6 +274,21 @@ def gamma_attack(image_path,image_name,output_dir):
     return out_path
 
 # ============================================================
+# Mean
+# ============================================================
+
+def mean_filter_attack(image_path,image_name,output_dir,kernel_size):
+    attacked_name = (f"MEAN_k{kernel_size}_{image_name}")
+    wImage = load_image_ffmpeg(image_path)
+    wImage = wImage.copy()
+
+    im_mean = cv2.blur(wImage, (kernel_size, kernel_size))
+
+    out_path = os.path.join(output_dir,attacked_name)
+    save_image_ffmpeg(im_mean, out_path)
+    return out_path
+
+# ============================================================
 # Median
 # ============================================================
 
@@ -419,26 +434,40 @@ def attack_one_image(group,image_path,image_name,attacked_root):
     filters_dir = os.path.join(base_output_dir,"Filters")
     ensure_dir(filters_dir)
     copy_metadata_files(image_path,filters_dir)
+    #Salt & Pepper
     for noise_prob in [0.05, 0.1, 0.2]:
         salt_pepper_attack(image_path,image_name,filters_dir,noise_prob)
 
+    #Gaussina Noise
     for noise_level in [0.05, 0.1, 0.2]:
         gaussian_noise_attack(image_path,image_name,filters_dir,noise_level)
 
+    #Compression
     for quality in [50, 70, 90]:
         compression_attack(image_path,image_name,filters_dir,quality)
 
+    #Gaussian Blur
     for kernel_size in [3, 5, 7]:
         gaussian_blur_attack(image_path,image_name,filters_dir,kernel_size)
+        
+    for kernel_size in [3,5]:
+        mean_filter_attack(image_path,image_name,filters_dir,kernel_size)
 
+    #Median Filter
     for kernel_size in [3, 5, 7]:
         median_attack(image_path,image_name,filters_dir,kernel_size)
 
+    #HEQ
     histogram_equalization_attack(image_path,image_name,filters_dir)
+    
+    #Gamma
     gamma_attack(image_path,image_name,filters_dir)
+    
+    #Motion Blur
     for kernel_size in [3, 5, 7]:
         motion_blur_attack(image_path,image_name,filters_dir,kernel_size)
-        
+    
+    #Sharpening Filter
     sharpen_attack(image_path,image_name,filters_dir)
 
     # --------------------------------------------------------

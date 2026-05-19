@@ -33,10 +33,10 @@ def extract(embedResult):
 # Author: Nikolaos Vouronikos
 # Description: Embed user's code-sequence and produce watermarked image
 # Output: Embed Object
-def embed(code, mode, imagePath, imageName, extension, step):
+def embed(code, mode, imagePath, imageName, extension):
 	try:
 		# Initialize variables
-		watermarkedBlocks, innerSips, index, extractionIsPrioritized = [], [], 0, 1
+		watermarkedBlocks, innerSips, index, extractionIsPrioritized, step = [], [], 0, 1, None
 		optimalCValues, gridSize, RBWidth, Rxy, Bxy, optimalGridPositionForEachBlock = [], [], [], [], [], []
 		em,ex = init()
 		code, size, mapping, codeSips, blockWidth, blockHeight, imageArray, M, N = prepareEmbedding(imagePath, code, 'FIXED')
@@ -52,6 +52,7 @@ def embed(code, mode, imagePath, imageName, extension, step):
 				blockImage = Image.fromarray(blockArray)														# Construct the block's image
 				if(index == 0):
 					gridSize, RBWidth, Rxy, Bxy = calculateBasicValues(blockProperties, 2, 2, blockImage, em)
+					step = int(gridSize[0] * len(innerSip))
 
 				optimalCValue, watermarkedBlock, optimalGridPosition, counterPositions = findOptimalCValueForBlock(blockProperties, em, code, blockImage, mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName, step)	# Begin C Optimization for Block
 				optimalGridPositionForEachBlock.append(optimalGridPosition), optimalCValues.append(optimalCValue), watermarkedBlocks.append(watermarkedBlock)
@@ -108,14 +109,14 @@ def findOptimalCValueForBlock(blockParams, embedObject, code, g_cell,
 # Author: Nikolaos Vouronikos
 # Description: Run function starts embed procedure
 # Output: None
-def run(imagePath, code, mode, step):
+def run(imagePath, code, mode):
 	extension = os.path.splitext(imagePath)[1]
 	imageName = os.path.splitext(os.path.basename(imagePath))[0]
 	startingPoint = time.time()
 	code = getListFromCode(code)
 
 	# Run Main Algorithm
-	embedResult = embed(code, mode, imagePath, imageName, extension, int(step)) 	# Embed
+	embedResult = embed(code, mode, imagePath, imageName, extension) 	# Embed
 	extractionResult = extract(embedResult) 							# Extract (optional)
 	codeExtracted = getCodeFromList(extractionResult.codeTaken)
 	writeBestCValuesInFile(embedResult.optimalCValues, codeExtracted, extractionResult.extractionRate, embedResult.subpath)
@@ -124,5 +125,5 @@ def run(imagePath, code, mode, step):
 if __name__ == '__main__':
 	# Initialization from command line
 	# Example: py rsipw.py testImages/image1.jpg 56728192afd67fca FAST 10 through cmd 
-	imagePath, code, mode, step = sys.argv[1:5]
-	run(imagePath, code, mode, step)
+	imagePath, code, mode = sys.argv[1:4]
+	run(imagePath, code, mode)

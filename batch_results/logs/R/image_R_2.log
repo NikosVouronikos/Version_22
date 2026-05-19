@@ -1,0 +1,3603 @@
+Embed key : 8 in Block 1
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 55.64594
+SSIM taken 0.99802
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99566
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 57.40793
+SSIM taken 0.99722
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 48.08319
+SSIM taken 0.98930
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 52.09314
+SSIM taken 0.99330
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 30.52884
+SSIM taken 0.99178
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 55.64621
+SSIM taken 0.99599
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 55.64541
+SSIM taken 0.99736
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 55.647015637125044
+SSIM = 0.9956627541346177
+[0, 109]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (109,217)
+Embed key : 10 in Block 2
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.05071
+SSIM taken 0.99652
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 39.57179
+SSIM taken 0.99690
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 56.15613
+SSIM taken 0.99798
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 46.69375
+SSIM taken 0.99040
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 50.84304
+SSIM taken 0.99462
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 56.05101
+SSIM taken 0.99768
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 56.11413
+SSIM taken 0.99842
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 55.64594
+SSIM taken 0.99687
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.114132858724616
+SSIM = 0.9984245262895319
+[218, 0]
+Finished grid movement
+
+Rows offset = (218,326)
+Columns offset = (0,108)
+Embed key : 10 in Block 3
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 32.66990
+SSIM taken 0.99329
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 57.23682
+SSIM taken 0.99749
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 56.15764
+SSIM taken 0.99643
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 46.74581
+SSIM taken 0.98582
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 50.84349
+SSIM taken 0.99128
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64594
+SSIM taken 0.99705
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 56.49712
+SSIM taken 0.99644
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.40422
+SSIM taken 0.99658
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 57.23682158715012
+SSIM = 0.9974898665431527
+[0, 109]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (109,217)
+Embed key : 13 in Block 4
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.40422
+SSIM taken 0.99676
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.05130
+SSIM taken 0.99622
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 37.06698
+SSIM taken 0.99678
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99616
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 34.20838
+SSIM taken 0.99460
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 32.49924
+SSIM taken 0.99461
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.40422277650623
+SSIM = 0.99675651064095
+[0, 0]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (0,108)
+Embed key : 14 in Block 5
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 40.03052
+SSIM taken 0.99698
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 36.90791
+SSIM taken 0.98988
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 37.80364
+SSIM taken 0.99370
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (0,108)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.68877
+SSIM taken 0.99691
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 29.75789
+SSIM taken 0.99228
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 56.73846
+SSIM taken 0.99658
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 47.45450
+SSIM taken 0.98752
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 51.42367
+SSIM taken 0.99198
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 32.67107
+SSIM taken 0.99470
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 55.64621
+SSIM taken 0.99567
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.6887673844985
+SSIM = 0.9969113560107808
+[0, 109]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (109,217)
+Embed key : 12 in Block 6
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 55.88250
+SSIM taken 0.99717
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.05101
+SSIM taken 0.99600
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 56.59039
+SSIM taken 0.99693
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64193
+SSIM taken 0.99538
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 55.64648
+SSIM taken 0.99739
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.05071
+SSIM taken 0.99658
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.59038912728886
+SSIM = 0.9969333928443885
+[109, 0]
+Finished grid movement
+
+Rows offset = (109,217)
+Columns offset = (0,108)
+Embed key : 11 in Block 7
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 55.64702
+SSIM taken 0.99482
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 58.16514
+SSIM taken 0.99702
+
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 48.71561
+SSIM taken 0.99004
+
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 52.87474
+SSIM taken 0.99340
+
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 11
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 56.13688
+SSIM taken 0.99518
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99446
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 55.64675
+SSIM taken 0.99473
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.13508
+SSIM taken 0.99625
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.13688024403379
+SSIM = 0.9951794287152046
+[109, 0]
+Finished grid movement
+
+Rows offset = (109,217)
+Columns offset = (0,108)
+Embed key : 10 in Block 8
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.68706
+SSIM taken 0.99725
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.71132
+SSIM taken 0.99677
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 47.51018
+SSIM taken 0.98793
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 51.41567
+SSIM taken 0.99232
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 56.15794
+SSIM taken 0.99703
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 32.42149
+SSIM taken 0.99513
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 31.74880
+SSIM taken 0.98883
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 32.10052
+SSIM taken 0.99222
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 55.64675
+SSIM taken 0.99581
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 31.40723
+SSIM taken 0.99439
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.68706393485162
+SSIM = 0.9972535569641967
+[0, 0]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (0,108)
+Embed key : 8 in Block 9
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.13538
+SSIM taken 0.99674
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.15764
+SSIM taken 0.99710
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 46.85149
+SSIM taken 0.98892
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 50.84349
+SSIM taken 0.99305
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 35.18181
+SSIM taken 0.99636
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99597
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 30.58196
+SSIM taken 0.99216
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.11533
+SSIM taken 0.99633
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.13538003854751
+SSIM = 0.996738945108437
+[0, 0]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (0,108)
+Embed key : 8 in Block 10
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.15824
+SSIM taken 0.99650
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99722
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 56.42662
+SSIM taken 0.99747
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 47.00711
+SSIM taken 0.98974
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 51.13408
+SSIM taken 0.99385
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64621
+SSIM taken 0.99742
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 56.02958
+SSIM taken 0.99698
+
+Key which was embeded : 8
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.73812
+SSIM taken 0.99742
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 47.51636
+SSIM taken 0.99024
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 51.42357
+SSIM taken 0.99381
+
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 8
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.158239278680156
+SSIM = 0.996499429472428
+[0, 0]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (0,108)
+Embed key : 12 in Block 11
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 55.64568
+SSIM taken 0.99715
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99784
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 55.88306
+SSIM taken 0.99728
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.88391
+SSIM taken 0.99805
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 56.13628
+SSIM taken 0.99797
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.04895
+SSIM taken 0.99830
+
+Key which was embeded : 12
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.13628009965101
+SSIM = 0.997966839933795
+[218, 0]
+Finished grid movement
+
+Rows offset = (218,326)
+Columns offset = (0,108)
+Embed key : 13 in Block 12
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 55.64648
+SSIM taken 0.99803
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.71269
+SSIM taken 0.99837
+
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 47.33175
+SSIM taken 0.99210
+
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 51.41607
+SSIM taken 0.99562
+
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (0,108)
+Columns offset = (109,217)
+Key which was embeded : 13
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 55.64594
+SSIM taken 0.99798
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 56.13418
+SSIM taken 0.99782
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 55.64621
+SSIM taken 0.99782
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 30.85907
+SSIM taken 0.99187
+
+Key which was embeded : 13
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.134180247167805
+SSIM = 0.9978231074477394
+[109, 109]
+Finished grid movement
+
+Rows offset = (109,217)
+Columns offset = (109,217)
+Embed key : 9 in Block 13
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.04865
+SSIM taken 0.99743
+
+Key which was embeded : 9
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 56.13598
+SSIM taken 0.99838
+
+Key which was embeded : 9
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 55.64675
+SSIM taken 0.99625
+
+Key which was embeded : 9
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.88278
+SSIM taken 0.99735
+
+Key which was embeded : 9
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 56.91575
+SSIM taken 0.99700
+
+Key which was embeded : 9
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 56.05042
+SSIM taken 0.99661
+
+Key which was embeded : 9
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.91574800098004
+SSIM = 0.9969951396040696
+[218, 0]
+Finished grid movement
+
+Rows offset = (218,326)
+Columns offset = (0,108)
+Embed key : 10 in Block 14
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 55.78372
+SSIM taken 0.99723
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 26.70816
+SSIM taken 0.98647
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 55.64407
+SSIM taken 0.99623
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 22.44373
+SSIM taken 0.97192
+
+Key which was embeded : 10
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 26.86543
+SSIM taken 0.98817
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 26.46971
+SSIM taken 0.98326
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 26.65338
+SSIM taken 0.98601
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (218,326)
+Columns offset = (0,108)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 36.84781
+SSIM taken 0.99642
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 34.51179
+SSIM taken 0.98820
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 35.52287
+SSIM taken 0.99257
+
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (218,326)
+Columns offset = (109,217)
+Key which was embeded : 10
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 55.78372253507854
+SSIM = 0.9972256904018165
+[0, 0]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (0,108)
+Embed key : 14 in Block 15
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 25.81978
+SSIM taken 0.98689
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 55.64702
+SSIM taken 0.99815
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 23.84583
+SSIM taken 0.98147
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 120
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 23.93119
+SSIM taken 0.97995
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 23.87763
+SSIM taken 0.98083
+
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 41
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 44
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 47
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 50
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 53
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 56
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 59
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 62
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 65
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 68
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 71
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 74
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 77
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 80
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 83
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 86
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 89
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 92
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 95
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 98
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 101
+Rows offset = (109,217)
+Columns offset = (0,108)
+Key which was embeded : 14
+Result of extraction = 0
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+Optimal c value for grid = 40
+-----------------------------------
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 55.64594
+SSIM taken 0.99735
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 27.94113
+SSIM taken 0.99075
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 33.53113
+SSIM taken 0.99526
+
+Key which was embeded : 14
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 55.647015637125044
+SSIM = 0.9981521337557265
+[0, 109]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (109,217)
+Embed key : 11 in Block 16
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.40358
+SSIM taken 0.99837
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (0,108)
+Columns offset = (109,217)
+PSNR taken 31.27682
+SSIM taken 0.99578
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (0,108)
+PSNR taken 55.64514
+SSIM taken 0.99770
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (109,217)
+Columns offset = (109,217)
+PSNR taken 56.05130
+SSIM taken 0.99649
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (0,108)
+PSNR taken 29.10220
+SSIM taken 0.99252
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+Rows offset = (218,326)
+Columns offset = (109,217)
+PSNR taken 55.88448
+SSIM taken 0.99610
+
+Key which was embeded : 11
+Result of extraction = 1
+
+Optimal c value for grid = 40
+-----------------------------------
+
+Running with c = 40
+PSNR = 56.40358453051802
+SSIM = 0.9983681755757071
+[0, 0]
+Finished grid movement
+
+Rows offset = (0,108)
+Columns offset = (0,108)
+PSNR taken 56.28028
+SSIM taken 0.99725
+
+Total positions checked for each block : 6
+Key which was embeded : 8
+Complete Extraction in block 1
+
+Key which was embeded : 10
+Complete Extraction in block 2
+
+Key which was embeded : 10
+Complete Extraction in block 3
+
+Key which was embeded : 13
+Complete Extraction in block 4
+
+Key which was embeded : 14
+Complete Extraction in block 5
+
+Key which was embeded : 12
+Complete Extraction in block 6
+
+Key which was embeded : 11
+Complete Extraction in block 7
+
+Key which was embeded : 10
+Complete Extraction in block 8
+
+Key which was embeded : 8
+Complete Extraction in block 9
+
+Key which was embeded : 8
+Complete Extraction in block 10
+
+Key which was embeded : 12
+Complete Extraction in block 11
+
+Key which was embeded : 13
+Complete Extraction in block 12
+
+Key which was embeded : 9
+Complete Extraction in block 13
+
+Key which was embeded : 10
+Complete Extraction in block 14
+
+Key which was embeded : 14
+Complete Extraction in block 15
+
+Key which was embeded : 11
+Complete Extraction in block 16
+
+Extraction percentage = 100.0%
+
+Elapsed time = 2.038 mins
+Elapsed time = 122.253 seconds
+
