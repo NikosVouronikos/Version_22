@@ -60,56 +60,6 @@ def optimizeCValueFast(blockParams, embedObject, code, originalBlock, extraction
 		if(optimalCValuePrevious == optimalCValue) :	# Avoiding dead-end
 			break
 
-	# Post processing C factor results		
-	if((not isSuccessfullExtraction(isExtracted)) and (extractionIsPrioritized == 1)):
-		if(completeExtractions != []):
-			optimalCValue = optimalCValue + 1
-			globalCValue = min(completeExtractions)
-			low = optimalCValue
-			high = globalCValue
-			while(low <= high):
-				print("Running with c = " + str(optimalCValue))
-				if(optimalCValue > globalCValue):
-					optimalCValue = globalCValue
-					watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalCValue, 2, 2, 
-																		gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
-					break
-
-				watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalCValue, 2, 2, 
-																	gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
-				isExtracted = getExtractionResult(watermarkedBlock, imagePath, blockParams.key, blockParams.sip, code, 
-													gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
-				optimalCValuePrevious = optimalCValue
-
-				if(isSuccessfullExtraction(isExtracted)):
-					break
-				elif(not isSuccessfullExtraction(isExtracted)):
-					low = optimalCValue
-					optimalCValue = optimalCValue + 3
-				if(optimalCValuePrevious == optimalCValue) :
-					break
-		else:
-			low = optimalCValue + 1
-			startCValue = low
-			high = 100
-			optimalCValue = startCValue
-			while(low <= high):
-				print("Running with c = " + str(optimalCValue))
-				watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalCValue, 2, 2, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
-				isExtracted = getExtractionResult(watermarkedBlock, imagePath, blockParams.key, blockParams.sip, code, gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
-				optimalCValuePrevious = optimalCValue
-				if(isSuccessfullExtraction(isExtracted)):
-					break
-				elif(not isSuccessfullExtraction(isExtracted)):
-					low = optimalCValue
-					optimalCValue = optimalCValue + 3
-				if(optimalCValuePrevious == optimalCValue) :
-					break
-			if(not isSuccessfullExtraction(isExtracted)):
-				optimalCValue = 40
-				print("Running with c = " + str(optimalCValue))
-				watermarkedBlock = embedObject.getWatermarkedImage(originalBlock, blockParams.sip, blockParams.sipSize, optimalCValue, 2, 2, 
-																	gridSize, RBWidth, Rxy, Bxy, gridPositionForEachBlock)
 	printResults(2, optimalCValue, 0, 0, [])
 	return optimalCValue,watermarkedBlock,isExtracted,psnr,ssim
 
@@ -144,7 +94,7 @@ def enumerate_grid_positions(blockParams, gridSize, step):
 
     maxY = blockParams.blockHeight - (gridSize[0] * blockParams.sipSize)
     maxX = blockParams.blockWidth  - (gridSize[1] * blockParams.sipSize)
-    jump = step + 1
+    jump = step // 2
 
     for offsetY in range(0, maxY + 1, jump):
         for offsetX in range(0, maxX + 1, jump):
