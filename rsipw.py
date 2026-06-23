@@ -10,6 +10,32 @@ from optimizer import *
 from attacker import *
 from metrics import *
 
+def pixel_bit_change_stats(original_img, watermarked_img):
+    original = np.array(original_img).astype(np.uint8)
+    watermarked = np.array(watermarked_img).astype(np.uint8)
+
+    if original.shape != watermarked.shape:
+        raise ValueError(f"Shape mismatch: {original.shape} vs {watermarked.shape}")
+
+    pixel_values_changed = np.count_nonzero(original != watermarked)
+    total_values = original.size
+
+    changed_pixels = np.count_nonzero(np.any(original != watermarked, axis=2))
+    total_pixels = original.shape[0] * original.shape[1]
+
+    xor = np.bitwise_xor(original, watermarked)
+    changed_bits = np.unpackbits(xor).sum()
+    total_bits = original.size * 8
+
+    print("Changed channel values:", pixel_values_changed)
+    print("Changed channel values %:", 100 * pixel_values_changed / total_values)
+
+    print("Changed pixels:", changed_pixels)
+    print("Changed pixels %:", 100 * changed_pixels / total_pixels)
+
+    print("Changed bits:", changed_bits)
+    print("Changed bits %:", 100 * changed_bits / total_bits)
+
 # Author: Nikolaos Vouronikos
 # Description: Extract user's code-sequence from watermarked image
 # Output: Extraction Object
@@ -60,6 +86,7 @@ def embed(code, mode, imagePath, imageName, extension):
 
 		watermarkedImageName = "watermarked_" + imageName
 		watermarkedImage = reconstructWatermarkedImage(imageArray,watermarkedBlocks,blockWidth,blockHeight,M,N)
+		#pixel_bit_change_stats(imageArray, watermarkedImage)
 		subpath = saveWatermarkedImage(watermarkedImageName, watermarkedImage, mapping)
 		writeBasicValuesInFile(gridSize, RBWidth, Rxy, Bxy, subpath)
 		writeGridPositionsInFile(optimalGridPositionForEachBlock, subpath)
