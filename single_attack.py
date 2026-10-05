@@ -6,6 +6,7 @@ from attacker import (
     copy_metadata_files,
     salt_pepper_attack,
     gaussian_noise_attack,
+    mean_filter_attack,
     median_attack,
     motion_blur_attack,
     resize_attack,
@@ -50,6 +51,8 @@ def main():
 
     if attack_name == "compression":
         out = compression_attack(image_path, image_name, output_dir, int(level))
+    elif attack_name == "mean":
+        out = mean_filter_attack(image_path,image_name,output_dir,int(level))
     elif attack_name == "median":
         out = median_attack(image_path,image_name,output_dir,int(level))
     elif attack_name == "motion":

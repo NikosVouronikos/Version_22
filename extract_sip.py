@@ -79,10 +79,7 @@ class ExtractPermutation:
 						raise ValueError(f"Invalid grid cell size {gridSize}: empty annulus at cell ({x},{y}) with moves={moves}, "f"Rxy={Rxy}, Bxy={Bxy}, RBWidth={RBWidth}")
 
 					AVG_RED = sum(red) / len(red)
-					if(len(red) == 0 or len(coord_blue) == 0):
-						AVG_BLUE = 0
-					else:
-						AVG_BLUE = sum(blue) / len(blue)
+					AVG_BLUE = 0
 					
 					avg.append(AVG_RED)
      
@@ -118,10 +115,7 @@ class ExtractPermutation:
 						raise ValueError(f"Invalid grid cell size {gridSize}: empty annulus at cell ({x},{y}) with moves={moves}, "f"Rxy={Rxy}, Bxy={Bxy}, RBWidth={RBWidth}")
 					
 					AVG_RED = sum(red) / len(red)
-					if(len(red) == 0 or len(coord_blue) == 0):
-						AVG_BLUE = 0
-					else:
-						AVG_BLUE = sum(blue) / len(blue)
+					AVG_BLUE = 0
 					
 					avg.append(AVG_RED)
 					c += 1
@@ -154,10 +148,7 @@ class ExtractPermutation:
 						raise ValueError(f"Invalid grid cell size {gridSize}: empty annulus at cell ({x},{y}) with moves={moves}, "f"Rxy={Rxy}, Bxy={Bxy}, RBWidth={RBWidth}")
 				
 					AVG_RED = sum(red) / len(red)
-					if(len(red) == 0 or len(coord_blue) == 0):
-						AVG_BLUE = 0
-					else:
-						AVG_BLUE = sum(blue) / len(blue)
+					AVG_BLUE = 0
 					
 					avg.append(AVG_RED)
 					c += 1
