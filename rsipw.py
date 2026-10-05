@@ -39,20 +39,20 @@ def pixel_bit_change_stats(original_img, watermarked_img):
 # Author: Nikolaos Vouronikos
 # Description: Extract user's code-sequence from watermarked image
 # Output: Extraction Object
-def extract(embedResult):
-	codeTaken,totalWatermarksExtracted = [],len(embedResult.watermarkedBlocks)
+def extract(embedResult, code):
+	extractionSuccess = 0
+	codeTaken = None
 	for i in range(len(embedResult.watermarkedBlocks)):
-		watermarkedBlock,sip,optimalGridPosition,innerSip,enable = embedResult.watermarkedBlocks[i],embedResult.codeSips[i],embedResult.optimalGridPositionForEachBlock[i],embedResult.innerSips[i],1
+		watermarkedBlock,sip,optimalGridPosition,innerSip,enable = embedResult.watermarkedBlocks[i],int(code),embedResult.optimalGridPositionForEachBlock[i],embedResult.innerSips[i],1
 		isExtracted,key1,key2,key3 = extractSiP(watermarkedBlock, sip, innerSip, embedResult.gridSize, embedResult.RBWidth, embedResult.Rxy, embedResult.Bxy, optimalGridPosition)
 		decodedKey = decodeKey(key1, key2, key3, sip)
 		if(decodedKey == "X"):
-			enable = 0
-			codeTaken.append(decodedKey)
-			totalWatermarksExtracted = totalWatermarksExtracted - 1
+			print("Extraction on attempt " + str(i + 1) + " failed. No key was extracted.")
 		else:
-			codeTaken.append(embedResult.mapping[decodedKey])
-		printResults(3, i, enable, 0, [])
-	extractionRate = (totalWatermarksExtracted / len(embedResult.watermarkedBlocks))*100 if len(embedResult.watermarkedBlocks) > 0 else 0
+			extractionSuccess = 1
+			codeTaken = decodedKey
+			print("Extraction on attempt " + str(i + 1) + " was successful. Extracted key is : " + str(decodedKey))
+	extractionRate = extractionSuccess*100 if len(embedResult.watermarkedBlocks) > 0 else 0
 	extractionResult = ExtractionResult(codeTaken, extractionRate, 0)
 	return extractionResult
 
@@ -65,11 +65,16 @@ def embed(code, mode, imagePath, imageName, extension):
 		watermarkedBlocks, innerSips, index, extractionIsPrioritized, step = [], [], 0, 1, None
 		optimalCValues, gridSize, RBWidth, Rxy, Bxy, optimalGridPositionForEachBlock = [], [], [], [], [], []
 		em,ex = init()
-		code, size, mapping, codeSips, blockWidth, blockHeight, imageArray, M, N = prepareEmbedding(imagePath, code, 'FIXED')
+		#code, size, mapping, codeSips, blockWidth, blockHeight, imageArray, M, N = prepareEmbedding(imagePath, code, 'FIXED')
+  
+		img = openImage(imagePath)
+		M,N = img.size
+		imageArray = np.array(img)
+		blockWidth,blockHeight = getBlockDimensions(M, 3, N, 2) #4x4 = 16 blocks
 
 		for offsetY in range(0, (N - blockHeight + 1), blockHeight):
 			for offsetX in range(0, (M - blockWidth + 1), blockWidth):
-				innerKey = codeSips[index]																		# innerKey is the integer w (the Watermark)
+				innerKey = int(code)																		# innerKey is the integer w (the Watermark)
 				print("Embed key : " + str(innerKey) + " in Block " + str(index + 1))
 				innerSip = encodeInteger(innerKey)																# innerSip is the 1D permutation of innerKey
 				innerSips.append(innerSip)																		# innerSips contains all the SiPs we embedded
@@ -87,12 +92,12 @@ def embed(code, mode, imagePath, imageName, extension):
 		watermarkedImageName = "watermarked_" + imageName
 		watermarkedImage = reconstructWatermarkedImage(imageArray,watermarkedBlocks,blockWidth,blockHeight,M,N)
 		#pixel_bit_change_stats(imageArray, watermarkedImage)
-		subpath = saveWatermarkedImage(watermarkedImageName, watermarkedImage, mapping)
+		subpath = saveWatermarkedImage(watermarkedImageName, watermarkedImage)
 		writeBasicValuesInFile(gridSize, RBWidth, Rxy, Bxy, subpath)
 		writeGridPositionsInFile(optimalGridPositionForEachBlock, subpath)
 		getPSNRAndSSIM(np.array(watermarkedImage), imageArray)
 		print("Total positions checked for each block : " + str(counterPositions))
-		embedResult = EmbedResult(watermarkedImage,watermarkedBlocks,codeSips,mapping,innerSips,subpath,optimalCValues,gridSize,RBWidth,Rxy,Bxy,optimalGridPositionForEachBlock)
+		embedResult = EmbedResult(watermarkedImage,watermarkedBlocks,innerSips,subpath,optimalCValues,gridSize,RBWidth,Rxy,Bxy,optimalGridPositionForEachBlock)
 		return embedResult
 	except Exception as e:
 		print(f"An error occurred: {e}")
@@ -140,17 +145,14 @@ def run(imagePath, code, mode):
 	extension = os.path.splitext(imagePath)[1]
 	imageName = os.path.splitext(os.path.basename(imagePath))[0]
 	startingPoint = time.time()
-	code = getListFromCode(code)
 
 	# Run Main Algorithm
 	embedResult = embed(code, mode, imagePath, imageName, extension) 	# Embed
-	extractionResult = extract(embedResult) 							# Extract (optional)
-	codeExtracted = getCodeFromList(extractionResult.codeTaken)
-	writeBestCValuesInFile(embedResult.optimalCValues, codeExtracted, extractionResult.extractionRate, embedResult.subpath)
+	extractionResult = extract(embedResult, code) 						# Extract (optional)
 	calculateElapseTimeAndPrintResults(startingPoint, extractionResult.extractionRate)
 
 if __name__ == '__main__':
 	# Initialization from command line
-	# Example: py rsipw.py testImages/image1.jpg 56728192afd67fca FAST 10 through cmd 
+	# Example: py rsipw.py testImages/image1.jpg 56728192afd67fca FAST through cmd 
 	imagePath, code, mode = sys.argv[1:4]
 	run(imagePath, code, mode)

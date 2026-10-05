@@ -81,19 +81,6 @@ def writeGridPositionsInFile(gridPositions, subpath):
 	f.close()
 
 # Author: Nikolaos Vouronikos
-def getCellsFromAttacked(attackedImage, size):
-	cells = []
-	M,N = attackedImage.size
-	channel_array = np.array(attackedImage)
-	blockWidth,blockHeight = getBlockDimensions(M, N, size) 
-	for r in range(0, (N - blockHeight + 1), blockHeight):
-		for c in range(0, (M - blockWidth + 1), blockWidth):
-			grid_cell = channel_array[r:r + blockHeight, c:c + blockWidth]
-			g_cell = Image.fromarray(grid_cell)
-			cells.append(g_cell)
-	return cells
-
-# Author: Nikolaos Vouronikos
 def getWatermarkedBlock(comCells, index, em, sip, optimalCValue, gridSize, RBWidth, Rxy, Bxy, moves):
 	print("Running with c = " + str(optimalCValue))
 	g_cell = comCells[index]
@@ -125,7 +112,7 @@ def getWatermarkedFolderName(watermarkedImageName):
 
 
 # Author: Nikolaos Vouronikos
-def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
+def saveWatermarkedImage(watermarkedImageName, watermarkedImage):
 
     import os
     import subprocess
@@ -212,13 +199,6 @@ def saveWatermarkedImage(watermarkedImageName, watermarkedImage, dictionary):
         subpath,
         "Code_Mapping.txt"
     )
-
-    with open(mapping_path, "w+") as mapping:
-
-        for key in dictionary:
-            mapping.write(
-                str(key) + "," + str(dictionary[key]) + "\n"
-            )
 
     return subpath
 

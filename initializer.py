@@ -16,12 +16,10 @@ class BlockProperties:
 		self.blockHeight = blockHeight
 
 class EmbedResult:
-	def __init__(self, watermarkedImage, watermarkedBlocks, codeSips, mapping, innerSips, subpath, 
+	def __init__(self, watermarkedImage, watermarkedBlocks, innerSips, subpath, 
 					optimalCValues, gridSize, RBWidth, Rxy, Bxy, optimalGridPositionForEachBlock):
 		self.watermarkedImage = watermarkedImage
 		self.watermarkedBlocks = watermarkedBlocks
-		self.codeSips = codeSips
-		self.mapping = mapping
 		self.innerSips = innerSips
 		self.subpath = subpath
 		self.optimalCValues = optimalCValues

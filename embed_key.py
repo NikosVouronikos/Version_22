@@ -175,7 +175,11 @@ class EmbedPermutation:
 						raise ValueError(f"Invalid grid cell size {gridSize}: empty annulus at cell ({x},{y}) with moves={moves}, "f"Rxy={Rxy}, Bxy={Bxy}, RBWidth={RBWidth}")
 
 					AVG_RED = sum(red) / len(red)
-					AVG_BLUE = sum(blue) / len(blue)
+					if(len(red) == 0 or len(coord_blue) == 0):
+						AVG_BLUE = 0
+					else:
+						AVG_BLUE = sum(blue) / len(blue)
+      
 					avg.append(AVG_RED)
 
 					if(AVG_BLUE <= AVG_RED):
@@ -218,7 +222,11 @@ class EmbedPermutation:
 						raise ValueError(f"Invalid grid cell size {gridSize}: empty annulus at cell ({x},{y}) with moves={moves}, "f"Rxy={Rxy}, Bxy={Bxy}, RBWidth={RBWidth}")
 
 					AVG_RED = sum(red) / len(red)
-					AVG_BLUE = sum(blue) / len(blue)
+					if(len(red) == 0 or len(coord_blue) == 0):
+						AVG_BLUE = 0
+					else:
+						AVG_BLUE = sum(blue) / len(blue)
+		
 					avg.append(AVG_RED)
 
 					if(AVG_BLUE <= AVG_RED):
@@ -262,7 +270,11 @@ class EmbedPermutation:
 						raise ValueError(f"Invalid grid cell size {gridSize}: empty annulus at cell ({x},{y}) with moves={moves}, "f"Rxy={Rxy}, Bxy={Bxy}, RBWidth={RBWidth}")
 
 					AVG_RED = sum(red) / len(red)
-					AVG_BLUE = sum(blue) / len(blue)
+					if(len(red) == 0 or len(coord_blue) == 0):
+						AVG_BLUE = 0
+					else:
+						AVG_BLUE = sum(blue) / len(blue)
+		
 					avg.append(AVG_RED)
 
 					if(AVG_BLUE <= AVG_RED):

@@ -17,9 +17,8 @@ def getWatermarkedBlocksInList(code, imagePath):
 	img = openImage(imagePath)
 	M,N = img.size
 	imageArray = np.array(img)
-
-	size = sqrt(len(code))										
-	blockWidth,blockHeight = getBlockDimensions(M, N, size)
+									
+	blockWidth,blockHeight = getBlockDimensions(M, 3, N, 2)
 
 	for offsetY in range(0, (N - blockHeight + 1), blockHeight):
 		for offsetX in range(0, (M - blockWidth + 1), blockWidth):	
@@ -56,13 +55,9 @@ def getMapping(code, imagePath):
 	return mapping
 
 # Author: Nikolaos Vouronikos
-def getInnerSiPs(codeSips):
-	innerSiPs = []
-	for i in range(len(codeSips)):
-		innerKey = codeSips[i]
-		innerSiP = encodeInteger(innerKey)
-		innerSiPs.append(innerSiP)
-	return innerSiPs
+def getInnerSiP(code):
+	innerSiP = encodeInteger(code)
+	return innerSiP
 
 # Author: Nikolaos Vouronikos
 def getBasicValues(imagePath):
@@ -87,7 +82,7 @@ def getBasicValues(imagePath):
 	return gridSize,RBWidth,Rxy,Bxy
 
 # Author: Nikolaos Vouronikos
-def getGridPositions(code, imagePath):
+def getGridPositions(imagePath, division):
 	positionsPath = os.path.join(os.path.dirname(imagePath), "GridPositions.txt")
 	allPositions = []
 
@@ -97,7 +92,7 @@ def getGridPositions(code, imagePath):
 		print("File cannot be opened")
 		exit(1)
 
-	for i in range(len(code)):
+	for i in range(division):
 		fileLine = f.readline()
 		lineSplit = fileLine.split(",")
 		position = [int(lineSplit[0]), int(lineSplit[1])]
@@ -105,24 +100,23 @@ def getGridPositions(code, imagePath):
 	return allPositions
 
 # Author: Nikolaos Vouronikos
-def extract(watermarkedBlocks, codeSips, mapping, innerSips, gridSize, RBWidth, Rxy, Bxy, allGridPositions):
-	totalWatermarks = len(watermarkedBlocks)
-	codeTaken,totalWatermarksExtracted,error = [],totalWatermarks,0
+def extract(watermarkedBlocks, innerSip, gridSize, RBWidth, Rxy, Bxy, allGridPositions):
+	extractionSuccess,error = 0,0
+	codeTaken = None
 	for i in range(len(watermarkedBlocks)):
-		watermarkedBlock,sip,bestMove,enable = watermarkedBlocks[i],codeSips[i],allGridPositions[i],1
-		isExtracted,key1,key2,key3,min_error = extractSiP(watermarkedBlock, sip, innerSips[i], gridSize, RBWidth, Rxy, Bxy, bestMove)
+		watermarkedBlock,sip,optimalGridPosition = watermarkedBlocks[i],int(code),allGridPositions[i]
+		isExtracted,key1,key2,key3,min_error = extractSiP(watermarkedBlock, sip, innerSip, gridSize, RBWidth, Rxy, Bxy, optimalGridPosition)
 		decodedKey = decodeKey(key1, key2, key3, sip)
 		if(decodedKey == "X"):
-			enable = 0
-			codeTaken.append(decodedKey)
-			totalWatermarksExtracted = totalWatermarksExtracted - 1
+			print("Extraction on attempt " + str(i + 1) + " failed. No key was extracted.")
 		else:
-			codeTaken.append(mapping[decodedKey])
-		printResults(3, i, enable, 0, [])
+			extractionSuccess = 1
+			codeTaken = decodedKey
+			print("Extraction on attempt " + str(i + 1) + " was successful. Extracted key is : " + str(decodedKey))
 		error = error + min_error
-
-	ber = (error / (totalWatermarks * len(innerSips[0]) * 4))
-	extractionRate = (totalWatermarksExtracted / totalWatermarks)*100 if totalWatermarks > 0 else 0
+	
+	ber = (error / (1 * len(innerSip) * 12))
+	extractionRate = extractionSuccess*100 if len(watermarkedBlocks) > 0 else 0
 	extractionResult = ExtractionResult(codeTaken, extractionRate, ber)
 	return extractionResult
 
@@ -144,7 +138,6 @@ def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, 
 		error_bits2 = SIP_to_BER(sip2, innerSip)
 		error_bits3 = SIP_to_BER(sip3, innerSip)
 	
-	print(error_bits1, error_bits2, error_bits3)
 	min_error = min(error_bits1, error_bits2, error_bits3)
  
 	if(recoEnabled):
@@ -168,14 +161,11 @@ def extractSiP(watermarkedBlock, originalKey, innerSip, gridSize, RBWidth, Rxy, 
 
 def runValidation(imagePath, code):
     startingPoint = time.time()
-    code = getListFromCode(code)
     watermarkedBlocks = getWatermarkedBlocksInList(code, imagePath)
-    mapping = getMapping(code, imagePath)
-    codeSiPs = getSipsFromCode(mapping, code)
-    innerSiPs = getInnerSiPs(codeSiPs)
+    innerSiP = getInnerSiP(int(code))
     gridSize,RBWidth,Rxy,Bxy = getBasicValues(imagePath)
-    allGridPositions = getGridPositions(code, imagePath)
-    extractionResult = extract(watermarkedBlocks, codeSiPs, mapping, innerSiPs, gridSize, RBWidth, Rxy, Bxy, allGridPositions)
+    allGridPositions = getGridPositions(imagePath, 6)
+    extractionResult = extract(watermarkedBlocks, innerSiP, gridSize, RBWidth, Rxy, Bxy, allGridPositions)
     end = time.time()
     secSTR,minSTR = calculateElapseTime(startingPoint, end)
     print("Elapsed time = " + str(minSTR) + " mins")

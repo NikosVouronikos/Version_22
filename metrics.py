@@ -12,8 +12,11 @@ def sip_to_bits(sip,bits_len):
 
 
 def SIP_to_BER(initial_sip, extracted_sip):
-    initial_sip_bits = sip_to_bits(initial_sip,4)
-    extracted_sip_bits = sip_to_bits(extracted_sip,4)
+    # Minimum number of bits needed to represent the largest value (at least 1, so all-zero lists still work)
+    n_bits = max(1, max(initial_sip).bit_length())
+    
+    initial_sip_bits = sip_to_bits(initial_sip, n_bits)
+    extracted_sip_bits = sip_to_bits(extracted_sip, n_bits)
 
     error_bits = 0
 

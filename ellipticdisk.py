@@ -9,6 +9,8 @@ def createEllipticDisk(array,R1_X,R1_Y,W,C_X,C_Y,cell_w,cell_h):
 	RES2 = []
 	COORD2 = []
 	angle = 0
+ 
+     
 
 	for x in range(cell_w):
 		for y in range(cell_h):
@@ -18,9 +20,10 @@ def createEllipticDisk(array,R1_X,R1_Y,W,C_X,C_Y,cell_w,cell_h):
 				
 	for x in range(cell_w):
 		for y in range(cell_h):
-			if((((x - C_X)**2) / (R2_X **2) + ((((y - C_Y)**2)) / (R2_Y **2))) <= 1):
-				COORD2.append((x,y))
-				RES2.append(array[x][y])
+			if(R2_X > 0 or R2_Y > 0):
+				if((((x - C_X)**2) / (R2_X **2) + ((((y - C_Y)**2)) / (R2_Y **2))) <= 1):
+					COORD2.append((x,y))
+					RES2.append(array[x][y])
 
 	intersection1 = Counter(RES1) & Counter(RES2)
 	intersection2 = Counter(COORD1) & Counter(COORD2)

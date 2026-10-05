@@ -2,9 +2,9 @@ import random,math
 
 # Author: Nikolaos Vouronikos
 # Description: Returns block's dimensions according to Image's dimensions
-def getBlockDimensions(M, N, size) :
-	blockWidth = math.floor((M / size))
-	blockHeight = math.floor((N / size))
+def getBlockDimensions(M, dM, N, dN) :
+	blockWidth = math.floor((M / dM))
+	blockHeight = math.floor((N / dN))
 	return blockWidth,blockHeight
 
 # Author: Nikolaos Vouronikos
