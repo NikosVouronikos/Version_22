@@ -115,27 +115,30 @@ def parse_validator_output(output):
     ber = None
     extraction_rate = None
     extracted_code = None
+    crr = None
+    fcber = None
+
+    def last_number(text):
+        nums = re.findall(r"[0-9]+(?:[.,][0-9]+)?(?:e-?[0-9]+)?", text)
+        return float(nums[-1].replace(",", ".")) if nums else None
 
     for line in output.splitlines():
         clean = line.strip()
 
-        # BER line
-        if "ber" in clean.lower():
-            nums = re.findall(r"[0-9]+(?:[.,][0-9]+)?", clean)
-            if nums:
-                ber = float(nums[-1].replace(",", "."))
-
-        # Extraction rate line
-        if "%" in clean:
-            nums = re.findall(r"[0-9]+(?:[.,][0-9]+)?", clean)
-            if nums:
-                extraction_rate = float(nums[-1].replace(",", "."))
+        if clean.startswith("BER ="):
+            ber = last_number(clean)
+        elif clean.startswith("FCBER ="):
+            fcber = last_number(clean)
+        elif clean.startswith("CRR ="):
+            crr = last_number(clean)
+        elif clean.endswith("%"):
+            extraction_rate = last_number(clean)
 
     matches = re.findall(r"\[[^\]]+\]", output)
     if matches:
         extracted_code = matches[-1]
 
-    return extraction_rate, ber, extracted_code
+    return extraction_rate, ber, extracted_code, crr, fcber
 
 
 def run_validator(validator_path, image_path, code, reco=None):
@@ -157,13 +160,15 @@ def run_validator(validator_path, image_path, code, reco=None):
     )
 
     output = completed.stdout + "\n" + completed.stderr
-    extraction_rate, ber, extracted_code = parse_validator_output(output)
+    extraction_rate, ber, extracted_code, crr, fcber = parse_validator_output(output)
 
     return {
         "return_code": completed.returncode,
         "extraction_rate_percent": extraction_rate,
         "ber": ber,
         "extracted_code": extracted_code,
+        "crr_percent": crr,
+        "fcber": fcber,
         "output": output
     }
 
@@ -188,6 +193,8 @@ def write_csv(csv_path, rows):
         "return_code",
         "extraction_rate_percent",
         "ber",
+        "crr_percent",
+        "fcber",
         "extracted_code"
     ]
 
@@ -217,19 +224,29 @@ def aggregate_results(rows):
                 "count": 0,
                 "avg_extraction_rate_percent": None,
                 "avg_ber": None,
+                "avg_crr_percent": None,
+                "avg_fcber": None,
                 "_rates": [],
-                "_bers": []
+                "_bers": [],
+                "_crrs": [],
+                "_fcbers": []
             }
         by_group_attack[key]["count"] += 1
         by_group_attack[key]["_rates"].append(row["extraction_rate_percent"])
         by_group_attack[key]["_bers"].append(row["ber"])
+        by_group_attack[key]["_crrs"].append(row["crr_percent"])
+        by_group_attack[key]["_fcbers"].append(row["fcber"])
 
     aggregate = []
     for item in by_group_attack.values():
         item["avg_extraction_rate_percent"] = safe_average(item["_rates"])
         item["avg_ber"] = safe_average(item["_bers"])
+        item["avg_crr_percent"] = safe_average(item["_crrs"])
+        item["avg_fcber"] = safe_average(item["_fcbers"])
         del item["_rates"]
         del item["_bers"]
+        del item["_crrs"]
+        del item["_fcbers"]
         aggregate.append(item)
 
     aggregate.sort(key=lambda x: (x["group"], x["category"], x["attack_type"], str(x["attack_level"])))
@@ -257,7 +274,7 @@ def write_summary(txt_path, rows, aggregate):
         for item in aggregate:
             f.write(
                 f"{item['group']} | {item['category']} | {item['attack_type']} {item['attack_level']} | "
-                f"count={item['count']} | avg_ER={item['avg_extraction_rate_percent']} | avg_BER={item['avg_ber']}\n"
+                f"count={item['count']} | VSR={item['avg_extraction_rate_percent']} | avg_CRR={item['avg_crr_percent']} | avg_BER={item['avg_ber']} | avg_FCBER={item['avg_fcber']}\n"
             )
 
 
@@ -303,7 +320,9 @@ def write_aggregate_csv(csv_path, aggregate):
         "attack_level",
         "count",
         "avg_extraction_rate_percent",
-        "avg_ber"
+        "avg_ber",
+        "avg_crr_percent",
+        "avg_fcber"
     ]
 
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
@@ -321,6 +340,18 @@ def write_aggregate_csv(csv_path, aggregate):
             row["avg_ber"] = (
                 round(row["avg_ber"], 4)
                 if row["avg_ber"] is not None
+                else None
+            )
+
+            row["avg_crr_percent"] = (
+                round(row["avg_crr_percent"], 2)
+                if row["avg_crr_percent"] is not None
+                else None
+            )
+
+            row["avg_fcber"] = (
+                round(row["avg_fcber"], 4)
+                if row["avg_fcber"] is not None
                 else None
             )
 
@@ -368,7 +399,15 @@ def main():
                 round(result["ber"], 4)
                 if result["ber"] is not None
                 else None,
-                    "extracted_code": result["extracted_code"]
+            "crr_percent":
+                round(result["crr_percent"], 2)
+                if result["crr_percent"] is not None
+                else None,
+            "fcber":
+                round(result["fcber"], 4)
+                if result["fcber"] is not None
+                else None,
+            "extracted_code": result["extracted_code"]
         }
         rows.append(row)
         er_str = (
@@ -383,10 +422,24 @@ def main():
             else "None"
         )
 
+        crr_str = (
+            f"{row['crr_percent']:.2f}"
+            if row['crr_percent'] is not None
+            else "None"
+        )
+
+        fcber_str = (
+            f"{row['fcber']:.4f}"
+            if row['fcber'] is not None
+            else "None"
+        )
+
         print(
             f"  return={row['return_code']} | "
-            f"ER={er_str}% | "
-            f"BER={ber_str}"
+            f"VSR={er_str}% | "
+            f"CRR={crr_str}% | "
+            f"BER={ber_str} | "
+            f"FCBER={fcber_str}"
         )
 
     aggregate = aggregate_results(rows)
@@ -395,6 +448,18 @@ def main():
     write_csv(csv_path, rows)
     write_json(json_path, rows, aggregate)
     write_summary(txt_path, rows, aggregate)
+
+    def fmt(value, digits):
+        return f"{value:.{digits}f}" if value is not None else "None"
+
+    print("\nResults per group and attack:")
+    print(f"{'Group':<8} {'Attack':<24} {'Level':<16} {'N':>3} {'VSR%':>7} {'CRR%':>7} {'BER':>7} {'FCBER':>7}")
+    for item in aggregate:
+        print(
+            f"{item['group']:<8} {item['attack_type']:<24} {str(item['attack_level']):<16} {item['count']:>3} "
+            f"{fmt(item['avg_extraction_rate_percent'], 2):>7} {fmt(item['avg_crr_percent'], 2):>7} "
+            f"{fmt(item['avg_ber'], 4):>7} {fmt(item['avg_fcber'], 4):>7}"
+        )
 
     print("\nSaved:")
     print(f"CSV : {csv_path}")

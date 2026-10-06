@@ -82,7 +82,8 @@ def embed(code, mode, imagePath, imageName, extension):
 				blockArray = imageArray[offsetY:(offsetY + blockHeight), offsetX:(offsetX + blockWidth)]		# Initialize and take the block
 				blockImage = Image.fromarray(blockArray)														# Construct the block's image
 				if(index == 0):
-					gridSize, RBWidth, Rxy, Bxy = calculateBasicValues(blockProperties, 2, 2, blockImage, em)
+					gridSize, RBWidth, Rxy, Bxy = calculateBasicValues(blockProperties, 2, 2)	# Calculate basic values for the first block (same for all blocks)
+					countMarkedCoefficients(gridSize, Rxy, RBWidth, len(innerSip))
 					step = int(gridSize[0] * len(innerSip))
 
 				optimalCValue, watermarkedBlock, optimalGridPosition, counterPositions = findOptimalCValueForBlock(blockProperties, em, code, blockImage, mode, extractionIsPrioritized, gridSize, RBWidth, Rxy, Bxy, imagePath, imageName, step)	# Begin C Optimization for Block

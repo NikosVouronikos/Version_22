@@ -188,19 +188,14 @@ def compression_attack(image_path,image_name,output_dir,quality):
 # Gaussian Noise
 # ============================================================
 
-def gaussian_noise_attack(image_path,image_name,output_dir,noise_level=0.1):
-    attacked_name = (f"GN_lvl{noise_level}_{image_name}")
-    wImage = load_image_ffmpeg(image_path)
-    wImage = wImage.copy()
-
-    w = wImage.shape[0]
-    h = wImage.shape[1]
-
-    gauss_noise = np.zeros((w, h, 3),dtype=np.uint8)
-    cv2.randn(gauss_noise,0,noise_level)
-    gauss_noise = (gauss_noise * 0.5).astype(np.uint8)
-    noisy = cv2.add(wImage,gauss_noise)
-    out_path = os.path.join(output_dir,attacked_name)
+def gaussian_noise_attack(image_path, image_name, output_dir, noise_level=0.01, seed=0):
+    attacked_name = f"GN_lvl{noise_level}_{image_name}"
+    img = load_image_ffmpeg(image_path).astype(np.float64) / 255.0
+    rng = np.random.default_rng(seed)
+    noise = rng.normal(0.0, np.sqrt(noise_level), img.shape)   # noise_level = variance
+    noisy = np.clip(img + noise, 0.0, 1.0)
+    noisy = np.round(noisy * 255.0).astype(np.uint8)
+    out_path = os.path.join(output_dir, attacked_name)
     save_image_ffmpeg(noisy, out_path)
     return out_path
 
@@ -435,11 +430,11 @@ def attack_one_image(group,image_path,image_name,attacked_root):
     ensure_dir(filters_dir)
     copy_metadata_files(image_path,filters_dir)
     #Salt & Pepper
-    for noise_prob in [0.05, 0.1, 0.2]:
+    for noise_prob in [0.001, 0.002, 0.005]:
         salt_pepper_attack(image_path,image_name,filters_dir,noise_prob)
 
     #Gaussina Noise
-    for noise_level in [0.05, 0.1, 0.2]:
+    for noise_level in [0.001, 0.005, 0.01]:
         gaussian_noise_attack(image_path,image_name,filters_dir,noise_level)
 
     #Compression

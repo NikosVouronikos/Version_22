@@ -92,5 +92,5 @@ def encodeInteger(key):
 
 
 if __name__ == '__main__':
-	sip = encodeInteger(12)
+	sip = encodeInteger(4327)
 	print(sip)

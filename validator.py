@@ -100,22 +100,39 @@ def getGridPositions(imagePath, division):
 	return allPositions
 
 # Author: Nikolaos Vouronikos
+# VSR : 100 if at least one copy is recovered exactly, else 0 (averaged over images gives the Verification Success Rate)
+# CRR : copies recovered exactly / copies embedded * 100
+# BER : bit errors of the best copy / bits of one SiP
+# FCBER : mean BER of the failed copies (None if there are none)
 def extract(watermarkedBlocks, innerSip, gridSize, RBWidth, Rxy, Bxy, allGridPositions):
-	extractionSuccess,error = 0,0
+	extractionSuccess = 0
 	codeTaken = None
+	bestError = None
+	survived = 0
+	failedErrors = []
+	n_bits = max(innerSip).bit_length()						# e.g. SiP of 4327 has max element 27 -> 5 bits
+	totalBits = len(innerSip) * n_bits						# e.g. 27 * 5 = 135 bits for one copy
 	for i in range(len(watermarkedBlocks)):
 		watermarkedBlock,sip,optimalGridPosition = watermarkedBlocks[i],int(code),allGridPositions[i]
 		isExtracted,key1,key2,key3,min_error = extractSiP(watermarkedBlock, sip, innerSip, gridSize, RBWidth, Rxy, Bxy, optimalGridPosition)
 		decodedKey = decodeKey(key1, key2, key3, sip)
 		if(decodedKey == "X"):
 			print("Extraction on attempt " + str(i + 1) + " failed. No key was extracted.")
+			failedErrors.append(min_error / totalBits)
 		else:
 			extractionSuccess = 1
+			survived = survived + 1
 			codeTaken = decodedKey
 			print("Extraction on attempt " + str(i + 1) + " was successful. Extracted key is : " + str(decodedKey))
-		error = error + min_error
-	
-	ber = (error / (1 * len(innerSip) * 12))
+		if(bestError is None or min_error < bestError):
+			bestError = min_error							# best copy over all blocks and channels
+
+	ber = bestError / totalBits
+	crr = (survived / len(watermarkedBlocks)) * 100 if len(watermarkedBlocks) > 0 else 0.0
+	fcber = (sum(failedErrors) / len(failedErrors)) if len(failedErrors) > 0 else 0.0
+	print("Copies recovered = " + str(survived) + "/" + str(len(watermarkedBlocks)) + " | failed = " + str(len(failedErrors)))
+	print("CRR = " + "{:.2f}".format(crr))
+	print("FCBER = " + str(fcber))
 	extractionRate = extractionSuccess*100 if len(watermarkedBlocks) > 0 else 0
 	extractionResult = ExtractionResult(codeTaken, extractionRate, ber)
 	return extractionResult

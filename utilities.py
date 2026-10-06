@@ -6,22 +6,35 @@ from metrics import *
 from initializer import *
 from ellipticdisk import createEllipticDisk
 
+# (cell size k, red radius R) per resolution group, keyed by Block height (image height / 2)
+GROUP_GEOMETRY = {
+	360: (5, 4), #720p
+	512: (6, 4), #1024p
+	540: (6, 5), #1080p
+	720: (6, 4), #1440p
+}
+
 # Author: Nikolaos Vouronikos
-def calculateBasicValues(blockParams, PR, PB, imageArray, em):
-	gridSize,RBWidth,Rxy,Bxy = [],[],[],[]
-	qSize,dSize = (4 * blockParams.sipSize),(2 * blockParams.sipSize)
-	RED_WIDTH = PR
+def countMarkedCoefficients(gridSize, Rxy, RBWidth, sipSize, channels=3, blocks=6):
+	g = gridSize[0]
+	red, coords = createEllipticDisk(np.ones((g, g)), Rxy[0], Rxy[1], RBWidth[0], g // 2, g // 2, g, g)
+	perCell = len(coords)
+	total = perCell * sipSize * channels * blocks
+	print("Cell = " + str(g) + "x" + str(g) + " | red radius = " + str(Rxy[0]) + " | width = " + str(RBWidth[0]))
+	print("Marked coefficients per cell = " + str(perCell) + " of " + str(g * g) + " at " + str(sorted(coords)))
+	print("Marked coefficients per image = " + str(total))
+	return perCell, total
+
+# Author: Nikolaos Vouronikos
+def calculateBasicValues(blockParams, PR, PB):
+	key = min(GROUP_GEOMETRY, key=lambda h: abs(h - blockParams.blockHeight))
+	cellSize, redRadius = GROUP_GEOMETRY[key]
 	RBWidth = [PR, PB]
-  	
-	RED_RADIOUS_X = math.floor(blockParams.blockHeight / qSize)
-	RED_RADIOUS_Y = math.floor(blockParams.blockHeight / qSize)
-	Rxy = [RED_RADIOUS_X, RED_RADIOUS_Y]
-
-	BLUE_RADIOUS_X = (RED_RADIOUS_X - RED_WIDTH)
-	BLUE_RADIOUS_Y = (RED_RADIOUS_Y - RED_WIDTH)
-	Bxy = [BLUE_RADIOUS_X, BLUE_RADIOUS_Y]
-
-	gridSize = getGridSize(em, imageArray, Rxy, Bxy, RBWidth)
+	Rxy = [redRadius, redRadius]
+	Bxy = [redRadius - PR, redRadius - PR]
+	gridSize = [cellSize, cellSize]
+	if (cellSize * blockParams.sipSize > min(blockParams.blockWidth, blockParams.blockHeight)):
+		raise ValueError(f"Grid of {cellSize * blockParams.sipSize}px does not fit in block {blockParams.blockWidth}x{blockParams.blockHeight}")
 	return gridSize,RBWidth,Rxy,Bxy
 
 # Author: Vasileios Vouronikos
