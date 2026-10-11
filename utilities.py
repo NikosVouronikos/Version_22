@@ -43,7 +43,7 @@ def mergeCellsToImage(cells, w, h, N) :
 	for i, j in it.product(range(N), range(N)):
 		arr = np.array(cells[i*N + j])
 		x,y = i*(h), j*(w)
-		display[x : x + (h), y : y + (w)] = arr
+		display[x : x + (h), y : y + (w)] = np.clip(np.rint(arr), 0, 255)
 	return display
 
 # Author: Nikolaos Vouronikos

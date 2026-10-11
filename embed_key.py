@@ -90,7 +90,7 @@ class EmbedPermutation:
 		for i, j in it.product(range(N), range(N)):
 			arr = sorted_cells[i*N+j]
 			x,y = i*(w), j*(h)
-			display[x : x + (w), y : y + (h)] = arr	
+			display[x : x + (w), y : y + (h)] = np.clip(np.rint(arr), 0, 255)	
 		return display
 
 	def modifyMagnitude(self, mag_marked, mag_rest, D_array, sip_cells, gw, gh, copt):

@@ -1,14 +1,14 @@
-Extraction on attempt 1 was successful. Extracted key is : 4327
+Extraction on attempt 1 failed. No key was extracted.
 Extraction on attempt 2 was successful. Extracted key is : 4327
-Extraction on attempt 3 failed. No key was extracted.
+Extraction on attempt 3 was successful. Extracted key is : 4327
 Extraction on attempt 4 failed. No key was extracted.
 Extraction on attempt 5 was successful. Extracted key is : 4327
 Extraction on attempt 6 was successful. Extracted key is : 4327
 Copies recovered = 4/6 | failed = 2
 CRR = 66.67
-FCBER = 0.17777777777777776
-Elapsed time = 0.043 mins
-Elapsed time = 2.584 seconds
+FCBER = 0.044444444444444446
+Elapsed time = 0.044 mins
+Elapsed time = 2.630 seconds
 4327
 
 100%

@@ -5,7 +5,7 @@ Marked coefficients per image = 4374
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 47.54512
+PSNR taken 47.53967
 SSIM taken 0.99565
 
 Key which was embeded : 4327
@@ -17,7 +17,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (81,243)
-PSNR taken 47.61444
+PSNR taken 47.61780
 SSIM taken 0.99502
 
 Key which was embeded : 4327
@@ -29,8 +29,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (162,324)
-PSNR taken 47.53313
-SSIM taken 0.99543
+PSNR taken 47.53878
+SSIM taken 0.99542
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -41,7 +41,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (243,405)
-PSNR taken 47.57205
+PSNR taken 47.57866
 SSIM taken 0.99535
 
 Key which was embeded : 4327
@@ -53,7 +53,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (324,486)
-PSNR taken 47.62349
+PSNR taken 47.62527
 SSIM taken 0.99516
 
 Key which was embeded : 4327
@@ -65,7 +65,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (405,567)
-PSNR taken 47.59191
+PSNR taken 47.59622
 SSIM taken 0.99540
 
 Key which was embeded : 4327
@@ -77,7 +77,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (0,162)
-PSNR taken 47.54362
+PSNR taken 47.54864
 SSIM taken 0.99536
 
 Key which was embeded : 4327
@@ -89,7 +89,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (81,243)
-PSNR taken 47.44797
+PSNR taken 47.45457
 SSIM taken 0.99533
 
 Key which was embeded : 4327
@@ -101,8 +101,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (162,324)
-PSNR taken 47.47613
-SSIM taken 0.99575
+PSNR taken 47.48025
+SSIM taken 0.99576
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -113,7 +113,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (243,405)
-PSNR taken 47.52200
+PSNR taken 47.52446
 SSIM taken 0.99553
 
 Key which was embeded : 4327
@@ -125,8 +125,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (324,486)
-PSNR taken 47.59444
-SSIM taken 0.99606
+PSNR taken 47.59635
+SSIM taken 0.99607
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -137,8 +137,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (405,567)
-PSNR taken 47.53502
-SSIM taken 0.99525
+PSNR taken 47.54161
+SSIM taken 0.99526
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -149,7 +149,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (0,162)
-PSNR taken 47.61721
+PSNR taken 47.61878
 SSIM taken 0.99538
 
 Key which was embeded : 4327
@@ -161,8 +161,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (81,243)
-PSNR taken 47.50546
-SSIM taken 0.99576
+PSNR taken 47.50020
+SSIM taken 0.99575
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -173,8 +173,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (162,324)
-PSNR taken 47.02371
-SSIM taken 0.99560
+PSNR taken 47.44600
+SSIM taken 0.99570
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -185,7 +185,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (243,405)
-PSNR taken 47.44424
+PSNR taken 47.44351
 SSIM taken 0.99623
 
 Key which was embeded : 4327
@@ -197,8 +197,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (324,486)
-PSNR taken 45.90563
-SSIM taken 0.99562
+PSNR taken 47.52392
+SSIM taken 0.99585
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -209,8 +209,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (405,567)
-PSNR taken 45.35922
-SSIM taken 0.99535
+PSNR taken 47.64820
+SSIM taken 0.99564
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -221,8 +221,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (0,162)
-PSNR taken 47.55120
-SSIM taken 0.99567
+PSNR taken 47.56206
+SSIM taken 0.99568
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -233,7 +233,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (81,243)
-PSNR taken 47.53726
+PSNR taken 47.53995
 SSIM taken 0.99562
 
 Key which was embeded : 4327
@@ -245,7 +245,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (162,324)
-PSNR taken 47.49117
+PSNR taken 47.49023
 SSIM taken 0.99619
 
 Key which was embeded : 4327
@@ -257,7 +257,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (243,405)
-PSNR taken 47.57653
+PSNR taken 47.57447
 SSIM taken 0.99564
 
 Key which was embeded : 4327
@@ -269,8 +269,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (324,486)
-PSNR taken 44.21516
-SSIM taken 0.99547
+PSNR taken 47.61941
+SSIM taken 0.99599
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -281,8 +281,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (405,567)
-PSNR taken 47.13445
-SSIM taken 0.99585
+PSNR taken 47.59120
+SSIM taken 0.99591
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -293,8 +293,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (0,162)
-PSNR taken 47.51408
-SSIM taken 0.99544
+PSNR taken 47.51928
+SSIM taken 0.99545
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -305,8 +305,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (81,243)
-PSNR taken 47.59457
-SSIM taken 0.99622
+PSNR taken 47.58930
+SSIM taken 0.99621
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -317,8 +317,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (162,324)
-PSNR taken 47.51044
-SSIM taken 0.99547
+PSNR taken 47.52292
+SSIM taken 0.99548
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -329,7 +329,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (243,405)
-PSNR taken 47.62536
+PSNR taken 47.61971
 SSIM taken 0.99550
 
 Key which was embeded : 4327
@@ -341,7 +341,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (324,486)
-PSNR taken 47.54802
+PSNR taken 47.54670
 SSIM taken 0.99583
 
 Key which was embeded : 4327
@@ -353,8 +353,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (405,567)
-PSNR taken 46.61868
-SSIM taken 0.99557
+PSNR taken 47.50224
+SSIM taken 0.99564
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -363,18 +363,18 @@ Optimal c value for grid = 40
 -----------------------------------
 
 Running with c = 40
-PSNR = 47.62535918756445
-SSIM = 0.9954994698525299
-[324, 243]
+PSNR = 47.64820459637954
+SSIM = 0.9956438695114754
+[162, 405]
 Finished grid movement
 
-Rows offset = (324,486)
-Columns offset = (243,405)
+Rows offset = (162,324)
+Columns offset = (405,567)
 Embed key : 4327 in Block 2
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 47.59225
+PSNR taken 47.59552
 SSIM taken 0.99532
 
 Key which was embeded : 4327
@@ -386,8 +386,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (81,243)
-PSNR taken 44.68638
-SSIM taken 0.99489
+PSNR taken 47.72172
+SSIM taken 0.99522
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -398,8 +398,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (162,324)
-PSNR taken 40.37568
-SSIM taken 0.99442
+PSNR taken 47.91710
+SSIM taken 0.99527
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -410,8 +410,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (243,405)
-PSNR taken 40.85181
-SSIM taken 0.99420
+PSNR taken 47.86988
+SSIM taken 0.99513
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -422,8 +422,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (324,486)
-PSNR taken 37.95755
-SSIM taken 0.99358
+PSNR taken 48.13206
+SSIM taken 0.99543
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -434,8 +434,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (405,567)
-PSNR taken 37.35933
-SSIM taken 0.99323
+PSNR taken 48.10497
+SSIM taken 0.99524
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -446,7 +446,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (0,162)
-PSNR taken 47.68239
+PSNR taken 47.68027
 SSIM taken 0.99555
 
 Key which was embeded : 4327
@@ -458,7 +458,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (81,243)
-PSNR taken 47.55978
+PSNR taken 47.56784
 SSIM taken 0.99516
 
 Key which was embeded : 4327
@@ -470,7 +470,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (162,324)
-PSNR taken 47.57106
+PSNR taken 47.57582
 SSIM taken 0.99507
 
 Key which was embeded : 4327
@@ -482,8 +482,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (243,405)
-PSNR taken 46.46131
-SSIM taken 0.99506
+PSNR taken 47.64199
+SSIM taken 0.99524
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -494,8 +494,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (324,486)
-PSNR taken 43.56111
-SSIM taken 0.99471
+PSNR taken 47.68713
+SSIM taken 0.99526
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -506,8 +506,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (405,567)
-PSNR taken 45.55629
-SSIM taken 0.99479
+PSNR taken 47.60290
+SSIM taken 0.99504
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -518,7 +518,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (0,162)
-PSNR taken 47.50838
+PSNR taken 47.50772
 SSIM taken 0.99565
 
 Key which was embeded : 4327
@@ -530,7 +530,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (81,243)
-PSNR taken 47.61638
+PSNR taken 47.62743
 SSIM taken 0.99537
 
 Key which was embeded : 4327
@@ -542,7 +542,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (162,324)
-PSNR taken 47.61402
+PSNR taken 47.61478
 SSIM taken 0.99541
 
 Key which was embeded : 4327
@@ -554,7 +554,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (243,405)
-PSNR taken 47.69602
+PSNR taken 47.70272
 SSIM taken 0.99548
 
 Key which was embeded : 4327
@@ -566,7 +566,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (324,486)
-PSNR taken 47.63440
+PSNR taken 47.63223
 SSIM taken 0.99539
 
 Key which was embeded : 4327
@@ -578,8 +578,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (405,567)
-PSNR taken 45.70952
-SSIM taken 0.99502
+PSNR taken 47.67914
+SSIM taken 0.99529
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -590,7 +590,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (0,162)
-PSNR taken 47.58672
+PSNR taken 47.59012
 SSIM taken 0.99562
 
 Key which was embeded : 4327
@@ -602,7 +602,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (81,243)
-PSNR taken 47.81320
+PSNR taken 47.80231
 SSIM taken 0.99538
 
 Key which was embeded : 4327
@@ -614,7 +614,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (162,324)
-PSNR taken 47.64769
+PSNR taken 47.63865
 SSIM taken 0.99533
 
 Key which was embeded : 4327
@@ -626,7 +626,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (243,405)
-PSNR taken 47.60318
+PSNR taken 47.60559
 SSIM taken 0.99524
 
 Key which was embeded : 4327
@@ -638,7 +638,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (324,486)
-PSNR taken 47.67452
+PSNR taken 47.67343
 SSIM taken 0.99573
 
 Key which was embeded : 4327
@@ -650,7 +650,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (405,567)
-PSNR taken 47.59702
+PSNR taken 47.60289
 SSIM taken 0.99529
 
 Key which was embeded : 4327
@@ -662,7 +662,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (0,162)
-PSNR taken 47.67953
+PSNR taken 47.66981
 SSIM taken 0.99517
 
 Key which was embeded : 4327
@@ -674,8 +674,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (81,243)
-PSNR taken 47.64092
-SSIM taken 0.99500
+PSNR taken 47.63267
+SSIM taken 0.99499
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -686,8 +686,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (162,324)
-PSNR taken 47.71208
-SSIM taken 0.99519
+PSNR taken 47.69393
+SSIM taken 0.99518
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -698,7 +698,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (243,405)
-PSNR taken 47.55899
+PSNR taken 47.55232
 SSIM taken 0.99545
 
 Key which was embeded : 4327
@@ -710,7 +710,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (324,486)
-PSNR taken 47.72954
+PSNR taken 47.73414
 SSIM taken 0.99549
 
 Key which was embeded : 4327
@@ -722,8 +722,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (405,567)
-PSNR taken 47.69279
-SSIM taken 0.99583
+PSNR taken 47.71444
+SSIM taken 0.99584
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -732,19 +732,19 @@ Optimal c value for grid = 40
 -----------------------------------
 
 Running with c = 40
-PSNR = 47.81320180119557
-SSIM = 0.995383595923736
-[243, 81]
+PSNR = 48.132060429645485
+SSIM = 0.9954272482524172
+[0, 324]
 Finished grid movement
 
-Rows offset = (243,405)
-Columns offset = (81,243)
+Rows offset = (0,162)
+Columns offset = (324,486)
 Embed key : 4327 in Block 3
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 42.38311
-SSIM taken 0.99465
+PSNR taken 47.75954
+SSIM taken 0.99532
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -755,8 +755,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (81,243)
-PSNR taken 44.41258
-SSIM taken 0.99496
+PSNR taken 47.68599
+SSIM taken 0.99536
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -767,8 +767,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (162,324)
-PSNR taken 47.62531
-SSIM taken 0.99517
+PSNR taken 47.62962
+SSIM taken 0.99518
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -779,8 +779,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (243,405)
-PSNR taken 47.09568
-SSIM taken 0.99528
+PSNR taken 47.54556
+SSIM taken 0.99538
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -791,8 +791,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (324,486)
-PSNR taken 47.03811
-SSIM taken 0.99551
+PSNR taken 47.49883
+SSIM taken 0.99558
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -803,8 +803,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (405,567)
-PSNR taken 44.57052
-SSIM taken 0.99540
+PSNR taken 47.43353
+SSIM taken 0.99576
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -815,8 +815,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (0,162)
-PSNR taken 40.25805
-SSIM taken 0.99445
+PSNR taken 47.81458
+SSIM taken 0.99549
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -827,8 +827,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (81,243)
-PSNR taken 39.94176
-SSIM taken 0.99393
+PSNR taken 47.86688
+SSIM taken 0.99519
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -839,8 +839,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (162,324)
-PSNR taken 44.55302
-SSIM taken 0.99476
+PSNR taken 47.60152
+SSIM taken 0.99508
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -851,8 +851,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (243,405)
-PSNR taken 46.35654
-SSIM taken 0.99523
+PSNR taken 47.61250
+SSIM taken 0.99543
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -863,8 +863,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (324,486)
-PSNR taken 46.33279
-SSIM taken 0.99567
+PSNR taken 47.69949
+SSIM taken 0.99587
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -875,8 +875,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (405,567)
-PSNR taken 46.33446
-SSIM taken 0.99511
+PSNR taken 47.52033
+SSIM taken 0.99527
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -887,8 +887,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (0,162)
-PSNR taken 40.27174
-SSIM taken 0.99402
+PSNR taken 47.99358
+SSIM taken 0.99545
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -899,8 +899,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (81,243)
-PSNR taken 42.24196
-SSIM taken 0.99470
+PSNR taken 47.80796
+SSIM taken 0.99544
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -911,8 +911,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (162,324)
-PSNR taken 47.59577
-SSIM taken 0.99561
+PSNR taken 47.60270
+SSIM taken 0.99563
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -923,7 +923,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (243,405)
-PSNR taken 47.52402
+PSNR taken 47.52076
 SSIM taken 0.99518
 
 Key which was embeded : 4327
@@ -935,8 +935,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (324,486)
-PSNR taken 47.11433
-SSIM taken 0.99516
+PSNR taken 47.56213
+SSIM taken 0.99526
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -947,8 +947,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (405,567)
-PSNR taken 47.14864
-SSIM taken 0.99522
+PSNR taken 47.60014
+SSIM taken 0.99526
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -959,8 +959,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (0,162)
-PSNR taken 44.47037
-SSIM taken 0.99513
+PSNR taken 47.71144
+SSIM taken 0.99555
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -971,8 +971,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (81,243)
-PSNR taken 47.12340
-SSIM taken 0.99509
+PSNR taken 47.59277
+SSIM taken 0.99519
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -983,7 +983,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (162,324)
-PSNR taken 47.57112
+PSNR taken 47.57232
 SSIM taken 0.99527
 
 Key which was embeded : 4327
@@ -995,7 +995,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (243,405)
-PSNR taken 47.70135
+PSNR taken 47.70333
 SSIM taken 0.99510
 
 Key which was embeded : 4327
@@ -1007,8 +1007,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (324,486)
-PSNR taken 47.59273
-SSIM taken 0.99537
+PSNR taken 47.60450
+SSIM taken 0.99538
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1019,8 +1019,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (405,567)
-PSNR taken 47.51964
-SSIM taken 0.99545
+PSNR taken 47.51072
+SSIM taken 0.99544
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1031,7 +1031,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (0,162)
-PSNR taken 47.75474
+PSNR taken 47.76900
 SSIM taken 0.99507
 
 Key which was embeded : 4327
@@ -1043,8 +1043,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (81,243)
-PSNR taken 47.69865
-SSIM taken 0.99492
+PSNR taken 47.69325
+SSIM taken 0.99491
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1055,8 +1055,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (162,324)
-PSNR taken 47.88863
-SSIM taken 0.99498
+PSNR taken 47.88667
+SSIM taken 0.99497
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1067,7 +1067,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (243,405)
-PSNR taken 47.63531
+PSNR taken 47.63314
 SSIM taken 0.99504
 
 Key which was embeded : 4327
@@ -1079,8 +1079,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (324,486)
-PSNR taken 47.73908
-SSIM taken 0.99541
+PSNR taken 47.75162
+SSIM taken 0.99542
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1091,7 +1091,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (405,567)
-PSNR taken 47.66574
+PSNR taken 47.66060
 SSIM taken 0.99545
 
 Key which was embeded : 4327
@@ -1101,18 +1101,18 @@ Optimal c value for grid = 40
 -----------------------------------
 
 Running with c = 40
-PSNR = 47.8886296988312
-SSIM = 0.9949770638097158
-[324, 162]
+PSNR = 47.99358290603604
+SSIM = 0.995446269085925
+[162, 0]
 Finished grid movement
 
-Rows offset = (324,486)
-Columns offset = (162,324)
+Rows offset = (162,324)
+Columns offset = (0,162)
 Embed key : 4327 in Block 4
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 47.55507
+PSNR taken 47.56113
 SSIM taken 0.99616
 
 Key which was embeded : 4327
@@ -1124,8 +1124,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (81,243)
-PSNR taken 47.51426
-SSIM taken 0.99595
+PSNR taken 47.50908
+SSIM taken 0.99594
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1136,8 +1136,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (162,324)
-PSNR taken 47.49148
-SSIM taken 0.99619
+PSNR taken 47.49188
+SSIM taken 0.99618
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1148,7 +1148,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (243,405)
-PSNR taken 47.58957
+PSNR taken 47.58409
 SSIM taken 0.99604
 
 Key which was embeded : 4327
@@ -1160,7 +1160,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (324,486)
-PSNR taken 47.53461
+PSNR taken 47.53792
 SSIM taken 0.99607
 
 Key which was embeded : 4327
@@ -1172,8 +1172,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (405,567)
-PSNR taken 47.54790
-SSIM taken 0.99587
+PSNR taken 47.55704
+SSIM taken 0.99588
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1184,7 +1184,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (0,162)
-PSNR taken 47.55468
+PSNR taken 47.54728
 SSIM taken 0.99603
 
 Key which was embeded : 4327
@@ -1196,7 +1196,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (81,243)
-PSNR taken 47.50037
+PSNR taken 47.50705
 SSIM taken 0.99595
 
 Key which was embeded : 4327
@@ -1208,7 +1208,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (162,324)
-PSNR taken 47.54085
+PSNR taken 47.53882
 SSIM taken 0.99627
 
 Key which was embeded : 4327
@@ -1220,8 +1220,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (243,405)
-PSNR taken 47.61537
-SSIM taken 0.99639
+PSNR taken 47.61870
+SSIM taken 0.99638
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1232,7 +1232,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (324,486)
-PSNR taken 47.57785
+PSNR taken 47.58296
 SSIM taken 0.99609
 
 Key which was embeded : 4327
@@ -1244,7 +1244,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (405,567)
-PSNR taken 47.55256
+PSNR taken 47.56164
 SSIM taken 0.99580
 
 Key which was embeded : 4327
@@ -1256,7 +1256,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (0,162)
-PSNR taken 47.09470
+PSNR taken 47.10109
 SSIM taken 0.99564
 
 Key which was embeded : 4327
@@ -1268,8 +1268,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (81,243)
-PSNR taken 45.63281
-SSIM taken 0.99659
+PSNR taken 47.14869
+SSIM taken 0.99671
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1280,8 +1280,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (162,324)
-PSNR taken 44.82970
-SSIM taken 0.99656
+PSNR taken 47.24021
+SSIM taken 0.99680
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1292,8 +1292,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (243,405)
-PSNR taken 47.23587
-SSIM taken 0.99590
+PSNR taken 47.22278
+SSIM taken 0.99589
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1304,7 +1304,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (324,486)
-PSNR taken 47.49999
+PSNR taken 47.50652
 SSIM taken 0.99569
 
 Key which was embeded : 4327
@@ -1316,7 +1316,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (405,567)
-PSNR taken 47.57757
+PSNR taken 47.57858
 SSIM taken 0.99649
 
 Key which was embeded : 4327
@@ -1328,8 +1328,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (0,162)
-PSNR taken 46.02352
-SSIM taken 0.99553
+PSNR taken 47.27249
+SSIM taken 0.99548
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1340,8 +1340,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (81,243)
-PSNR taken 45.67603
-SSIM taken 0.99591
+PSNR taken 47.22167
+SSIM taken 0.99592
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1352,8 +1352,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (162,324)
-PSNR taken 46.75283
-SSIM taken 0.99647
+PSNR taken 47.16839
+SSIM taken 0.99638
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1364,8 +1364,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (243,405)
-PSNR taken 47.33400
-SSIM taken 0.99558
+PSNR taken 47.33758
+SSIM taken 0.99557
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1376,7 +1376,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (324,486)
-PSNR taken 47.71641
+PSNR taken 47.72923
 SSIM taken 0.99586
 
 Key which was embeded : 4327
@@ -1388,7 +1388,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (405,567)
-PSNR taken 47.59436
+PSNR taken 47.59256
 SSIM taken 0.99531
 
 Key which was embeded : 4327
@@ -1400,8 +1400,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (0,162)
-PSNR taken 47.58656
-SSIM taken 0.99579
+PSNR taken 47.59262
+SSIM taken 0.99578
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1412,8 +1412,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (81,243)
-PSNR taken 47.66113
-SSIM taken 0.99538
+PSNR taken 47.65039
+SSIM taken 0.99537
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1424,7 +1424,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (162,324)
-PSNR taken 47.58946
+PSNR taken 47.59975
 SSIM taken 0.99543
 
 Key which was embeded : 4327
@@ -1436,8 +1436,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (243,405)
-PSNR taken 47.63254
-SSIM taken 0.99573
+PSNR taken 47.63885
+SSIM taken 0.99572
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1448,7 +1448,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (324,486)
-PSNR taken 47.64727
+PSNR taken 47.65189
 SSIM taken 0.99537
 
 Key which was embeded : 4327
@@ -1460,8 +1460,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (405,567)
-PSNR taken 47.62045
-SSIM taken 0.99547
+PSNR taken 47.61742
+SSIM taken 0.99546
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1470,8 +1470,8 @@ Optimal c value for grid = 40
 -----------------------------------
 
 Running with c = 40
-PSNR = 47.71640839867828
-SSIM = 0.9958625879772168
+PSNR = 47.729232227219924
+SSIM = 0.9958612679864847
 [243, 324]
 Finished grid movement
 
@@ -1481,7 +1481,7 @@ Embed key : 4327 in Block 5
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 47.79455
+PSNR taken 47.78895
 SSIM taken 0.99565
 
 Key which was embeded : 4327
@@ -1493,7 +1493,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (81,243)
-PSNR taken 47.70755
+PSNR taken 47.69691
 SSIM taken 0.99562
 
 Key which was embeded : 4327
@@ -1505,7 +1505,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (162,324)
-PSNR taken 47.79073
+PSNR taken 47.79483
 SSIM taken 0.99624
 
 Key which was embeded : 4327
@@ -1517,7 +1517,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (243,405)
-PSNR taken 48.15283
+PSNR taken 48.14034
 SSIM taken 0.99610
 
 Key which was embeded : 4327
@@ -1529,8 +1529,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (324,486)
-PSNR taken 48.23604
-SSIM taken 0.99588
+PSNR taken 48.21992
+SSIM taken 0.99587
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1541,8 +1541,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (405,567)
-PSNR taken 48.54559
-SSIM taken 0.99554
+PSNR taken 48.51724
+SSIM taken 0.99553
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1553,7 +1553,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (0,162)
-PSNR taken 47.72164
+PSNR taken 47.72546
 SSIM taken 0.99588
 
 Key which was embeded : 4327
@@ -1565,7 +1565,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (81,243)
-PSNR taken 47.67737
+PSNR taken 47.67483
 SSIM taken 0.99566
 
 Key which was embeded : 4327
@@ -1577,7 +1577,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (162,324)
-PSNR taken 47.64747
+PSNR taken 47.65132
 SSIM taken 0.99538
 
 Key which was embeded : 4327
@@ -1589,7 +1589,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (243,405)
-PSNR taken 48.03453
+PSNR taken 48.03472
 SSIM taken 0.99559
 
 Key which was embeded : 4327
@@ -1601,8 +1601,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (324,486)
-PSNR taken 48.16128
-SSIM taken 0.99585
+PSNR taken 48.14368
+SSIM taken 0.99584
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1613,8 +1613,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (405,567)
-PSNR taken 48.41591
-SSIM taken 0.99586
+PSNR taken 48.39106
+SSIM taken 0.99584
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1625,7 +1625,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (0,162)
-PSNR taken 47.61278
+PSNR taken 47.61650
 SSIM taken 0.99593
 
 Key which was embeded : 4327
@@ -1637,8 +1637,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (81,243)
-PSNR taken 47.67996
-SSIM taken 0.99563
+PSNR taken 47.67684
+SSIM taken 0.99562
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1649,8 +1649,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (162,324)
-PSNR taken 47.60885
-SSIM taken 0.99558
+PSNR taken 47.60217
+SSIM taken 0.99557
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1661,7 +1661,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (243,405)
-PSNR taken 47.63622
+PSNR taken 47.63631
 SSIM taken 0.99597
 
 Key which was embeded : 4327
@@ -1673,7 +1673,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (324,486)
-PSNR taken 47.01120
+PSNR taken 47.00981
 SSIM taken 0.99552
 
 Key which was embeded : 4327
@@ -1685,8 +1685,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (405,567)
-PSNR taken 44.03610
-SSIM taken 0.99626
+PSNR taken 47.30116
+SSIM taken 0.99652
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1697,8 +1697,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (0,162)
-PSNR taken 47.62344
-SSIM taken 0.99633
+PSNR taken 47.63233
+SSIM taken 0.99634
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1709,7 +1709,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (81,243)
-PSNR taken 47.53890
+PSNR taken 47.53850
 SSIM taken 0.99577
 
 Key which was embeded : 4327
@@ -1721,8 +1721,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (162,324)
-PSNR taken 47.55045
-SSIM taken 0.99583
+PSNR taken 47.55639
+SSIM taken 0.99584
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1733,7 +1733,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (243,405)
-PSNR taken 47.69718
+PSNR taken 47.69337
 SSIM taken 0.99625
 
 Key which was embeded : 4327
@@ -1745,8 +1745,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (324,486)
-PSNR taken 42.86037
-SSIM taken 0.99581
+PSNR taken 47.28747
+SSIM taken 0.99616
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1757,7 +1757,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (405,567)
-PSNR taken 47.08618
+PSNR taken 47.08663
 SSIM taken 0.99501
 
 Key which was embeded : 4327
@@ -1769,7 +1769,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (0,162)
-PSNR taken 47.57951
+PSNR taken 47.58540
 SSIM taken 0.99579
 
 Key which was embeded : 4327
@@ -1781,7 +1781,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (81,243)
-PSNR taken 47.52789
+PSNR taken 47.53284
 SSIM taken 0.99572
 
 Key which was embeded : 4327
@@ -1793,8 +1793,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (162,324)
-PSNR taken 47.64092
-SSIM taken 0.99580
+PSNR taken 47.65257
+SSIM taken 0.99581
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1805,7 +1805,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (243,405)
-PSNR taken 47.64612
+PSNR taken 47.64324
 SSIM taken 0.99548
 
 Key which was embeded : 4327
@@ -1817,7 +1817,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (324,486)
-PSNR taken 47.73144
+PSNR taken 47.72943
 SSIM taken 0.99530
 
 Key which was embeded : 4327
@@ -1829,8 +1829,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (405,567)
-PSNR taken 47.60780
-SSIM taken 0.99526
+PSNR taken 47.59576
+SSIM taken 0.99524
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1839,8 +1839,8 @@ Optimal c value for grid = 40
 -----------------------------------
 
 Running with c = 40
-PSNR = 48.54558505894481
-SSIM = 0.9955405805496987
+PSNR = 48.51723820275246
+SSIM = 0.9955322444243621
 [0, 405]
 Finished grid movement
 
@@ -1850,8 +1850,8 @@ Embed key : 4327 in Block 6
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 49.19718
-SSIM taken 0.99554
+PSNR taken 49.14078
+SSIM taken 0.99552
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1862,8 +1862,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (81,243)
-PSNR taken 48.87951
-SSIM taken 0.99529
+PSNR taken 48.84637
+SSIM taken 0.99527
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1874,8 +1874,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (162,324)
-PSNR taken 48.56061
-SSIM taken 0.99538
+PSNR taken 48.54672
+SSIM taken 0.99537
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1886,8 +1886,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (243,405)
-PSNR taken 48.17200
-SSIM taken 0.99501
+PSNR taken 48.16098
+SSIM taken 0.99500
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1898,8 +1898,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (324,486)
-PSNR taken 48.33907
-SSIM taken 0.99532
+PSNR taken 48.31088
+SSIM taken 0.99530
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1910,8 +1910,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (0,162)
 Columns offset = (405,567)
-PSNR taken 48.43062
-SSIM taken 0.99519
+PSNR taken 48.41195
+SSIM taken 0.99518
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1922,8 +1922,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (0,162)
-PSNR taken 48.56604
-SSIM taken 0.99542
+PSNR taken 48.53942
+SSIM taken 0.99541
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1934,7 +1934,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (81,243)
-PSNR taken 48.15106
+PSNR taken 48.13353
 SSIM taken 0.99529
 
 Key which was embeded : 4327
@@ -1946,7 +1946,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (162,324)
-PSNR taken 47.94283
+PSNR taken 47.93545
 SSIM taken 0.99506
 
 Key which was embeded : 4327
@@ -1958,7 +1958,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (243,405)
-PSNR taken 47.91647
+PSNR taken 47.91590
 SSIM taken 0.99508
 
 Key which was embeded : 4327
@@ -1970,7 +1970,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (324,486)
-PSNR taken 48.14311
+PSNR taken 48.13985
 SSIM taken 0.99546
 
 Key which was embeded : 4327
@@ -1982,8 +1982,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (81,243)
 Columns offset = (405,567)
-PSNR taken 47.85516
-SSIM taken 0.99573
+PSNR taken 47.84003
+SSIM taken 0.99572
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -1994,7 +1994,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (0,162)
-PSNR taken 47.90690
+PSNR taken 47.89865
 SSIM taken 0.99533
 
 Key which was embeded : 4327
@@ -2006,7 +2006,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (81,243)
-PSNR taken 47.67474
+PSNR taken 47.66960
 SSIM taken 0.99514
 
 Key which was embeded : 4327
@@ -2018,8 +2018,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (162,324)
-PSNR taken 47.64244
-SSIM taken 0.99512
+PSNR taken 47.65034
+SSIM taken 0.99513
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2030,7 +2030,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (243,405)
-PSNR taken 47.67651
+PSNR taken 47.67068
 SSIM taken 0.99522
 
 Key which was embeded : 4327
@@ -2042,8 +2042,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (324,486)
-PSNR taken 47.56833
-SSIM taken 0.99546
+PSNR taken 47.58073
+SSIM taken 0.99547
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2054,7 +2054,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (162,324)
 Columns offset = (405,567)
-PSNR taken 47.61109
+PSNR taken 47.60412
 SSIM taken 0.99535
 
 Key which was embeded : 4327
@@ -2066,7 +2066,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (0,162)
-PSNR taken 47.65612
+PSNR taken 47.65248
 SSIM taken 0.99502
 
 Key which was embeded : 4327
@@ -2078,7 +2078,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (81,243)
-PSNR taken 47.60513
+PSNR taken 47.60544
 SSIM taken 0.99506
 
 Key which was embeded : 4327
@@ -2090,8 +2090,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (162,324)
-PSNR taken 47.62969
-SSIM taken 0.99520
+PSNR taken 47.63205
+SSIM taken 0.99519
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2102,7 +2102,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (243,405)
-PSNR taken 47.59530
+PSNR taken 47.59136
 SSIM taken 0.99499
 
 Key which was embeded : 4327
@@ -2114,8 +2114,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (324,486)
-PSNR taken 47.70261
-SSIM taken 0.99547
+PSNR taken 47.70046
+SSIM taken 0.99546
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2126,8 +2126,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (243,405)
 Columns offset = (405,567)
-PSNR taken 47.57246
-SSIM taken 0.99496
+PSNR taken 47.57031
+SSIM taken 0.99495
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2138,8 +2138,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (0,162)
-PSNR taken 47.66480
-SSIM taken 0.99512
+PSNR taken 47.65669
+SSIM taken 0.99511
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2150,8 +2150,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (81,243)
-PSNR taken 47.66149
-SSIM taken 0.99501
+PSNR taken 47.65528
+SSIM taken 0.99500
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2162,8 +2162,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (162,324)
-PSNR taken 47.55958
-SSIM taken 0.99529
+PSNR taken 47.56313
+SSIM taken 0.99528
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2174,7 +2174,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (243,405)
-PSNR taken 47.60667
+PSNR taken 47.62703
 SSIM taken 0.99527
 
 Key which was embeded : 4327
@@ -2186,7 +2186,7 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (324,486)
-PSNR taken 47.62601
+PSNR taken 47.62547
 SSIM taken 0.99498
 
 Key which was embeded : 4327
@@ -2198,8 +2198,8 @@ Optimal c value for grid = 40
 Running with c = 40
 Rows offset = (324,486)
 Columns offset = (405,567)
-PSNR taken 47.66922
-SSIM taken 0.99520
+PSNR taken 47.66980
+SSIM taken 0.99519
 
 Key which was embeded : 4327
 Result of extraction = 1
@@ -2208,15 +2208,15 @@ Optimal c value for grid = 40
 -----------------------------------
 
 Running with c = 40
-PSNR = 49.19718082375934
-SSIM = 0.995539049911789
+PSNR = 49.140779186606764
+SSIM = 0.9955190347427973
 [0, 0]
 Finished grid movement
 
 Rows offset = (0,162)
 Columns offset = (0,162)
-PSNR taken 48.09623
-SSIM taken 0.99561
+PSNR taken 48.16453
+SSIM taken 0.99565
 
 Total positions checked for each block : 30
 Key which was embeded : 4327
@@ -2233,6 +2233,6 @@ Key which was embeded : 4327
 Extraction on attempt 6 was successful. Extracted key is : 4327
 Extraction percentage = 100%
 
-Elapsed time = 3.824 mins
-Elapsed time = 229.424 seconds
+Elapsed time = 3.845 mins
+Elapsed time = 230.693 seconds
 

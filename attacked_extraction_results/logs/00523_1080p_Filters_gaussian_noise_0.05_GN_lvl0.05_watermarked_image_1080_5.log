@@ -6,11 +6,11 @@ Extraction on attempt 5 failed. No key was extracted.
 Extraction on attempt 6 failed. No key was extracted.
 Copies recovered = 0/6 | failed = 6
 CRR = 0.00
-FCBER = 0.5123456790123456
+FCBER = 0.5098765432098765
 Elapsed time = 0.053 mins
-Elapsed time = 3.182 seconds
+Elapsed time = 3.162 seconds
 None
 
 0%
-BER = 0.48148148148148145
+BER = 0.45925925925925926
 
